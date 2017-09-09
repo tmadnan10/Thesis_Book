@@ -1,0 +1,874 @@
+\documentclass[12pt,notitlepage,oneside]{report}
+
+\usepackage{buetcseugthesis}
+\usepackage{bm}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=0mm}
+\newcommand\tab[1][.5cm]{\hspace*{#1}}
+% Uncomment the following line if you need to write in Bangla
+% \usepackage{usebangla}
+
+% Uncomment any of the following lines should you need to
+% suppress the LOF, or LOT or LOA
+
+% \suppresslistoffigures 
+% \suppresslistoftables
+% \suppresslistofalgorithms
+
+% For index creation, comment this out if you do not want to create an
+% index
+\makeindex[intoc]
+
+\begin{document}
+
+% Edit as needed below this line
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Chapter-1 Introduction
+\input{introduction}
+%\input{buetcseugthesisintroduction.tex}
+
+%Chapter-2 Basic Terminologies
+
+\chapter{Basic Terminologies}
+
+\section{Big Data}
+Big Data is a term for voluminous amounts of data that has the potential to be mined for information. Big data can be analyzed for insights that lead to better decisions. Big Data is characterized by three main factors: the extremely large volume of data, the wide variety of data types and the velocity at which the data must be processed. 
+
+Such voluminous data can come from countless different sources such as business sales records, the collected results of scientific experiments of real-time sensors used in the internet of things (IoT).
+
+Data may exist in wide variety of types, including structured data, such as SQL database stores, as well as unstructured data such as document files or streaming data from sensors. Big data of different types and from different sources may be used together during analysis.
+
+Principal Component Analysis(PCA), which is the main focus of our thesis, is considered as a pre-processing step in Big Data Analytic. It reveals the relations between the different dimensions of data and allows a reduction in dimensionality of the data via low rank approximation.
+
+\section{Data Analysis}
+According to \cite{dataanalysis} Data analysis, also known as analysis of data or data analytics, is a process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information, suggesting conclusions, and supporting decision-making. Data analysis has multiple facets and approaches, encompassing diverse techniques under a variety of names, in different business, science, and social science domains.
+
+Data mining is a particular data analysis technique that focuses on modeling and knowledge discovery for predictive rather than purely descriptive purposes, while business intelligence covers data analysis that relies heavily on aggregation, focusing on business information \cite{01}. In statistical applications data analysis can be divided into descriptive statistics, exploratory data analysis (EDA), and confirmatory data analysis (CDA). EDA focuses on discovering new features in the data and CDA on confirming or falsifying existing hypotheses. Predictive analytics focuses on application of statistical models for predictive forecasting or classification, while text analytics applies statistical, linguistic, and structural techniques to extract and classify information from textual sources, a species of unstructured data. All are varieties of data analysis.
+
+\section{Geo Distributed Data}
+
+Over the year concept about data has changed a lot. Only few years ago data were generated locally and computation was done locally also. But now data are generated over the whole world. Data are not bound to locality. 
+
+Data are by born geographically distributed over the world. That's why nowadays geo distributed analysis is being popular. Data are not gather in one place rather algorithms are being designed to run over the geo-distributed data.
+
+\section{Data Sovereignty}
+
+Data sovereignty is the concept that information which has been converted and stored in binary digital form is subject to the laws of the country in which it is located \cite{sovereign}.
+
+Many of the current concerns that surround data sovereignty relate to enforcing privacy regulations and preventing data that is stored in a foreign country from being subpoenaed by the host country's government.
+
+The wide-spread adoption of cloud computing services, as well as new approaches to data storage including object storage, have broken down traditional geopolitical barriers more than ever before. In response, many countries have regulated new compliance requirements by amending their current laws or enacting new legislation that requires customer data to be kept within the country the customer resides. 
+
+Verifying that data exists only at allowed locations can be difficult. It requires the cloud customer to trust that their cloud provider is completely honest and open about where their servers are hosted and adhere strictly to service level agreements (SLAs).
+
+
+\section{Data Cluster and Cluster Computing}
+A cluster is a system comprising two or more computers or systems (called nodes) which work together to execute a particular task. They are usually deployed for High Availability (HA) for greater reliability and High performance Computing (HPC) to provide greater computational power than a single computer can provide.
+
+The components of a cluster are usually connected to each other through fast local area networks (LANs), with each node running its own instance of an operating system(OS). In most circumstance, all of the nodes use the same hardware and the same OS, although it is possible to user different OS and/or different hardware on each computer.
+
+\subsection{Advantages}
+
+Cluster computing provides the following important advantages.
+
+\begin{enumerate}
+	\item Cluster computing is completely a scalable solution. Resources may be removed or new resources may be added to clusters after the system has already been deployed. They can scale to very large and complex systems with large computing power, not possible with single computers. Also each of the machines in a cluster can be a complete system, usable for a Wide range of other computing applications.
+	
+	\item Clustering solutions are more fault tolerant. If one of the servers in the system stops working, other servers in the cluster can take the load. If a server in the cluster needs any maintenance, it can be done by stopping it while handing the load over to other servers.
+	
+	\item Clusters are more cost effective. A cluster will cost much less than a single computer of comparable speed and availability.
+	
+\end{enumerate}
+
+\subsection{Disadvantages}
+
+Unfortunately, clustering suffers from some limitations as well:
+
+\begin{enumerate}
+	\item As clusters consist of many computers running in parallel, it is obvious that these systems are only efficient in carrying out a specific task if the task can be separated into smaller subtasks that can be completed in parallel. This may not always be possible.
+	
+	\item The network hardware used to communicate typically has low bandwidth and high latency (as compared to the link between the different processors in a single computer) and this communication complexity usually acts as the bottleneck during execution of a task. Thus, algorithms are required to be designed to run on distributed settings and must be optimized to reduce communication between nodes which may be tough to do.
+	
+	\item Clusters can become very large and complex, and the maintenance of these large and complex systems could be quite expensive.
+\end{enumerate}
+
+\section{Data Parallelism}
+Data parallelism is a form of parallelization across multiple processors in parallel computing environments. It focuses on distributing the data across different nodes, which operate on the data in parallel. It can be applied on regular data structures like arrays and matrices by working on each element in parallel. It contrasts to task parallelism as another form of parallelism \cite{dparallel}.
+
+A data parallel job on an array of `$n$' elements can be divided equally among all the processors. Let us assume we want to sum all the elements of the given array and the time for a single addition operation is Ta time units. In the case of sequential execution, the time taken by the process will be $n*Ta$ time units as it sums up all the elements of an array. On the other hand, if we execute this job as a data parallel job on 4 processors the time taken would reduce to $(n/4)*Ta$ + Merging overhead time units. Parallel execution results in a speed up of $4$ over sequential execution. One important thing to note is that the locality of data references plays an important part in evaluating the performance of a data parallel programming model. Locality of data depends on the memory accesses performed by the program as well as the size of the cache.
+
+\section{Model Parallelism}
+
+Data Parallelism and Model Parallelism are different ways of distributing an algorithm. These are often used in the context of machine learning algorithms that use stochastic gradient descent to learn some model parameters \cite{mparallel}.
+
+In model parallelism algorithm sends the same data to all the cores. Each core is responsible for estimating different parameter(s). Cores then exchange their estimate(s) with each other to come up with the right estimate for  all the parameters.
+
+
+\section{TensorFlow}
+
+TensorFlow \cite{tensor} is an open source software library for numerical computation using data flow graphs. As we have used the concept of model parallelism and data parallelism in our geo distributed algorithm, so it is important. Because in \textit{TensorFlow}  architecture both the model parallelism and data parallelism have been used.
+
+The flexible architecture of \textit{TensorFlow} allows to deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API. \textit{TensorFlow} was originally developed by researchers and engineers working on the \textit{Google} Brain Team within \textit{Google}'s Machine Intelligence research organization for the purpose os conducting machine learning and deep neural networks research, but the system is general enough to be applicable in wide variety of other domains as well.
+
+
+\section{\textit{Hadoop} Cluster}
+\textit{Hadoop} \cite{116} is an open source software framework built on two technologies, Linux operation system and Java programming language. It supports the processing and storage of extremely large data sets in a cluster computing environment. It is part of the Apache project sponsored by the Apache Software Foundation.
+
+All the modules in \textit{Hadoop} are designed with the assumption that hardware failures are common occurrences and should be automatically handled by the framework. 
+
+\section{\textit{Hadoop} MapReduce}
+MapReduce is the heart of \textit{Hadoop}. MapReduce is a processing technique and a programming paradigm for distributed computing based on Java. It allows for massive scalability across hundreds or thousands of servers in a \textit{Hadoop} cluster.
+
+The MapReduce algorithm consists of two important tasks, namely Map and Reduce. Map takes a set of data and converts it into another set of data, where individual elements are broken down into tuples (key-value-pairs). Reduce takes the output from a map as an input and combines those data tuples into smaller set of tuples. As the sequence of the name MapReduce implies, the reduce task is always performed after the map job.
+
+During a MapReduce job, \textit{Hadoop} assigns the Map and Reduce tasks to the appropriate serves in the cluster. The framework manages all the details of data passing such as issuing tasks, verifying task completion, and copying data around the cluster between the nodes.
+
+Most of the computing takes place on nodes with data on local disks that reduces the network traffic.
+
+After completion of the given tasks, the cluster collects and reduces the data to form an appropriate result, and sends it back to the \textit{Hadoop} server.
+
+\section{Spark Cluster}
+Spark \cite{spark} is an open source processing engine that provides scalable, massively parallel, in-memory execution environment for running analytics applications. It can be thought as an in-memory layer that sits above multiple data stores, where data can be loaded into memory and analyzed in parallel across a cluster.
+
+Much like MapReduce, Spark works to distribute data across a cluster, and process that data in parallel. But unlike MapReduce - which shuffles files around on disk - Spark works in memory, making it much faster at processing data than MapReduce.
+
+Spark includes rebuilt machine-learning algorithms and graph analysis algorithms that are especially written to execute in parallel and in memory. It also supports interactive SQL processing of queries and real-time streaming analytics.
+
+Spark provides programmers with an application programming interface (API) centered on a data structure called the resilient distributed dataset (RDD), a read-only multiset of data items distributed over a cluster of machines, that is maintained in a fault-tolerant way. The availability of RDDs facilitates the implementation of both iterative algorithms, that visit their dataset multiple times in a loop, and exploratory data analysis (the repeated database-style querying of data). Thus, Spark is the ideal platform for implementing pragmatic PPCA (our proposed algorithm) which is an iterative algorithm.
+
+
+\section{Dimensionality Reduction}
+
+\section{Vector Norms}
+A norm is a function $\pmb{||.||: V\rightarrow R}$ which satisfies
+
+\begin{enumerate}[label={(\Roman*)}]
+	\item  $\pmb{\parallel x \parallel \geq 0, \forall x \in V\ and \parallel x \parallel = 0 \Longleftrightarrow x = 0}$
+	\item $ \pmb{\parallel x+y\parallel \leq \parallel x\parallel + \parallel y\parallel , \forall x,y  \in  V } $
+	\item $ \pmb{\parallel \lambda x \parallel = \parallel \lambda \parallel \parallel x \parallel , \forall \lambda \in C \quad and \quad \forall x \in V}$
+\end{enumerate}
+
+Where $\pmb{V  \subseteq  C^n} $ is known as the vector space. In words, these conditions require that (I) the norm of a nonzero vector is strictly positive, (II) the norm of a vector sum does not exceed the sum of the norms of its parts which is known as the triangle inequality, and (III) scaling a vector scales its norm by the same amount. Thus, norms can be thought of as functions that define the size of a vector.
+
+\section{p-Norm}
+
+p-Norm is a family of vector norms, denoted as $\pmb{ \parallel . \parallel _p }$, given by:
+
+
+$$\pmb{ \parallel x \parallel _p \quad} = \quad (\sum_{i=1}^{n} \pmb{|x_i|^p})^ {\pmb{\frac{1}{p}}} $$
+
+The most widely used are the 1-norm, 2-norm (also known as Euclidean norm ), and $ \infty-norm$ ( also known as sup-norm):
+
+\begin{align*}
+ \parallel x \parallel _1 &= \sum_{i=1}^{n} |x_i| \\
+ \parallel x \parallel _2 &= \sqrt{\sum_{i=1}^{n} x_i^2}\\
+  \parallel x \parallel _\infty &= max(|x_i|)
+\end{align*}
+
+\section{Frobenius Norm}
+This is a element-wise norm where the vector norm used is the 2-norm. Each entry of the matrix is considered as a dimension of a vector and 2-norm of the resulting vector is calculated. So we have,
+$$ \pmb{\parallel A \parallel _F} = \sqrt{\sum_{i=1}^{m}\sum_{j=1}^{n}\pmb{a_{ij}^2}}$$
+
+which is equivalent to 
+
+$$\pmb{ \parallel A \parallel _F = \sqrt{tr(A*A)} = \sqrt{tr(AA*)} }$$
+
+
+where A is an $ m x n $ matrix, $a_ij$ is the value in the i-th row and j-th column of A, A* is the conjugate transpose of A, and tr(B) is the trace of B (the sum of its diagonal entries). Since tr(AA*) is the sum of the eigenvalues of AA*, we have an alternative characterization of the Frobenius norm:
+
+$$ \pmb{\parallel A \parallel _F }= \sqrt{\sum_{i=1}^{n}\lambda _i} $$
+
+
+\section{Normal Distribution}
+
+In probability theory, the normal (or Gaussian) distribution is a very common continuous probability distribution. Normal distributions are important in statistics and are often used in the natural and social sciences to represent real-valued random variables whose distributions are not known \cite{01} \ \ \ [2].
+
+The normal distribution is useful because of the central limit theorem. In its most general form, under some conditions (which include finite variance), it states that averages of samples of observations of random variables independently drawn from independent distributions converge in distribution to the normal, that is, become normally distributed when the number of observations is sufficiently large. Physical quantities that are expected to be the sum of many independent processes (such as measurement errors) often have distributions that are nearly normal  \ \ \  [3]   Moreover, many results and methods (such as propagation of uncertainty and least squares parameter fitting) can be derived analytically in explicit form when the relevant variables are normally distributed.
+
+The normal distribution is sometimes informally called the bell curve. However, many other distributions are bell-shaped (such as the Cauchy, Student's t, and logistic distributions). Even the term Gaussian bell curve is ambiguous because it may be used to refer to some function defined in terms of the Gaussian function which is not a probability distribution because it is not normalized in that it does not integrate to 1.
+
+The probability density of the normal distribution is \cite{normal}
+$$\pmb{f(x | \mu , \sigma ^ 2) = \frac{1}{\sqrt{2\pi \sigma ^2}} e^{-\frac{(x-\mu)^2}{2 \sigma ^2}} }$$
+
+Where: 
+
+\begin{itemize}
+	\item $\mu$ is the mean or expectation of the distribution (and also its median and mode).
+	\item $ \sigma $ is the standard deviation.
+	\item $ \sigma ^2 $ is the variance.
+\end{itemize}
+
+
+
+
+\section{Matrix Diagonalization}
+
+Matrix diagonalization is the process of taking a square matrix and converting it into a special type of matrix--a so-called diagonal matrix--that shares the same fundamental properties of the underlying matrix. Matrix diagonalization is equivalent to transforming the underlying system of equations into a special set of coordinate axes in which the matrix takes this canonical form. Diagonalizing a matrix is also equivalent to finding the matrix's eigenvalues, which turn out to be precisely the entries of the diagonalized matrix. Similarly, the eigenvectors make up the new set of axes corresponding to the diagonal matrix.
+
+The remarkable relationship between a diagonalized matrix, eigenvalues, and eigenvectors follows from the beautiful mathematical identity (the eigen decomposition) that a square matrix A can be decomposed into the very special form
+
+$$ A \quad = \quad PDP^{-1} $$
+
+where P is a matrix composed of the eigenvectors of $A$, $D$ is the diagonal matrix constructed from the corresponding eigenvalues, and $P^{-1}$ is the matrix inverse of $P$. According to the eigen decomposition theorem, an initial matrix equation
+
+$$ AX \quad = \quad Y $$
+
+can always be written 
+
+$$ PDP^{-1}X = Y $$
+
+(at least as long as P is a square matrix), and premultiplying both sides by $P^{-1}$ gives
+
+$DP^-1X = P^{-1}Y.$
+
+Since the same linear transformation $P^{-1}$ is being applied to both X and Y, solving the original system is equivalent to solving the transformed system
+
+$DX' = Y'$,
+
+where $X'=P^{-1}X$ and $Y'=P^{-1}Y$. This provides a way to canonicalize a system into the simplest possible form, reduce the number of parameters from $n \times n$ for an arbitrary matrix to $n$ for a diagonal matrix, and obtain the characteristic properties of the initial matrix. This approach arises frequently in physics and engineering, where the technique is oft used and extremely powerful.
+
+
+
+\section{Expectation Maximization (EM) Algorithm}
+
+\section{Stop Condition}
+
+In iterative algorithm like EM, main terminating condition considered is the change in desired variable or objective function. For example in PPCA our desired variables are $W$ and $ \sigma ^2$. To check convergence we can give tolerance limit as input. If magnitude of changes in desired variable is less than our tolerance limit then we consider our algorithm has converged. But this is not most effective when we want to know how much accuracy we have obtained after convergence. Thus in many cases, error is checked after each iteration and algorithm is terminated if error goes down our target limit.
+
+
+
+
+
+%Chapter-3 PCA as Data Analytic Technique
+\input{PCA.tex}
+
+% Citation examples
+
+%Chapter-4 Our Focus
+
+\chapter{Our Focus}
+In current world, the rate of generation of data is quite large. We live in an age of Big Data and Internet of Things (loT). The term Big Data is not really an overstatement. Numerous web services share and collect data of huge scale, typically in terabytes range, and the data includes various aspects of users, for example, clicks, visits, likes, shares, comments, reviews, ratings, tweets, photos, videos etc. Apart from these web services, big data is also generated by countless sensors all around the globe to gather valuable information about respective fields. For example, closed circuit cameras recording is a good source of big data. In a nutshell, every electronic device, Internet services, embedded system and sensor the globe produce and transmit data and big data is being generated by these multiple sources at an alarming velocity, volume and variety.
+
+For researchers, however, big data brings new sets of challenges like how to efficiently and
+effectively handle big data in commodity computers, how to apply conventional algorithms, how
+to properly manage big data in distributed setting etc. Specially, in field of machine leaning and
+Pattern recognition, big data poses a threat, because the conventional algorithms were designed
+solely to fulfil its purpose where entire dataset can fit in memory. Distributed setting was not
+taken into consideration. In nutshell, to extract any meaningful insight from this big data, we
+need powerful tools to analyse it, elastic frameworks to cope up with its sheer volume and most
+importantly we have to rethink and redesign existing algorithms which are most suitable for
+smaller sized dataset and do not take advantage of clusters.
+
+In this chapter we will discuss the present issues that we are going to take into consideration in our research. We will indicate the challenges we targeted and in later chapters we will give our proposals in order to minimize these challenges in data analysis.
+\section{Tall and Wide Data}
+In general, the width of data means the number of features that each data sample is comprised of. In present world, this features count is increasing at large scale. The feature count or width of data sample can also be named as ``Dimension of Data". One of the most effective use of PCA is dimensionality reduction. Many machine learning algorithms are not capable of handling data with large dimension. Therefore, we can use PCA to reduce the width of data then fit them in some kind of machine learning model. This present some kind of new challenge. The present PCA algorithms are not that much capable of handle very wide data that is tall also. Therefore before making the data suitable for machine learning models by dimensionality reduction, the PPCA algorithm has to deal with the curse of tall and wide data. The present implementation of \textit{sPCA} done good number of optimization to make efficient use of memory. Still it is not capable of handling tall and wide data. The memory overflow occurs while computing the intermediate results. 
+\section{The Blessings and Curses of Geo Distributed Data}
+
+\subsection{The Bright Sides}
+\subsubsection{Assurance of Faster Data Access}
+\subsubsection{Protection of National Privacy}
+\subsubsection{Sparsity of Data Centers}
+\subsubsection{Development in Business Sector}
+
+
+\subsection{The Dark Sides}
+\subsubsection{New Challenges in Data Analysis}
+\subsubsection{Unavailability of Global View }
+\subsubsection{Break Down of Data Consistency}
+
+\section{Challenges We Targeted and Our Proposed Solution}
+
+\input{regression.tex}
+
+\chapter{Our Proposed Approach}
+As discussed before, we are interested in presenting an approach that will resolve the memory limitation problem and hence give an systematic way to run \emph{PPCA} on geographically distributed data. 
+
+\section{Handling Tall and Wide Big Data}
+Our first concern was to make commodity computers capable of performing PPCA on such big data which has very large sample count as well as very high dimension i.e. very large feature count. In this respect we will follow the approach from \cite{elgamal} with some necessary improvements. To have a distributed settings we will take advantage of cluster computing. In case of very wide data the size of principal subspace $W$ is going to be very big. Therefore, we have to treat the principal subspace $W$ as big data also. Performing PPCA in the conventional approach on tall and wide big data will result in the overflow of memory. Therefore, we have to make some kind of improvements to make the approach capable of handling tall and wide big data in case of performing PPCA overcoming the memory scarcity. The steps of performing PPCA in a single cluster is as follows:
+
+\subsection{\textbf{Step 1 - Partition of Principal Subspace $W$}}\hspace*{\fill} \\
+For data with the dimension $N \times D$ we will get a principal subspace of dimension $D \times d$ where $d$ denotes the number of principal components we want. Working with full horizontal $D$ dimension of $W$ will result in memory overflow. Therefore, we will make $n$ horizontal partition of $W$ and create $W_1, W_2, \dots , W_n$. As a result each stage of creating $W$ will consists of $n$ smaller stages of creating $W_i$. 
+
+
+\subsection{\textbf{Step 2 - Data Partition}}\hspace*{\fill} \\
+As we are partitioning the horizontal $D$ dimension of principal subspace $W$, we are indirectly make vertical partition of our data of $N \times D$. At each iteration of generating $W$, we have to work on a specific horizontal segment of it. Therefore, we have to work with only that segment of dimension of our data. In that sense we can say that we are creating vertical partition of our main data matrix. It might be a case that data is pretty large that even a distributed setting with multiple machines might not be capable of performing the PPCA task by keeping the full data in memory. In such case our approach can be memory efficient by loading only a single segment of data at each iteration. This will help in memory intense tasks.  
+
+\subsection{\textbf{Step 3 - Expectation Step and Omission of Noise Model}}\hspace*{\fill} \\
+From Algorithm \ref{basic} we can see that computation of $\pmb{\sigma ^2}$ involves $X$ which is going to a $N \times d$ matrix. Therefore, passing such big data will result in communication bottleneck. For simplicity of computation and minimizing the inter data cluster communication, we will omit the noise calculation. 
+
+On the other hand, in order to take advantage from segmented computation, we have to make some changes in the Expectation and Maximization steps of the main \textbf{EM Algorithm} of PPCA. 
+Omitting the noise model and from Equation (\ref{PPCA:EM}), (\ref{PPCA:EM1}) and Algorithm \ref{basic}, the E-Steps are:
+
+\begin{align}
+\label{1}
+M &= W^T * W\\
+\label{2}
+X &= Y_c * W * M^{-1}\\
+\label{3}
+XtX &= X^T * X\\
+\label{4}
+YtX &= Y_c^T * X
+\end{align}
+
+In our approach $M$ is not going to be produces at the start of the process as ot depends on $W$ which will be segmented in our system. Therefore we are going to produce multiple number of $M$'s and accumulate them to produce the final $M$. The steps equivalent to Equation \ref{1}: 
+\begin{align}
+\label{5}
+M_i &= W_i^T * W_i \\
+\label{6}
+M &= \sum^n_{i = 1} M_i
+\end{align}
+Similar thing will happen for producing $X$ of Equation \ref{2}:
+\begin{align}
+\label{7}
+X_i &= {Y_c}_i * W_i\\
+\label{8}
+X &= \sum^n_{i = 1} X_i
+\end{align}
+%We can see that as soon as $M_i$'s and $X-i$'s are generated at the end of $n$ segmented iterations according to Equations \ref{5} and \ref{7}, we can generate $M$ and $X$ by using Equations \ref{6} and \ref{8}. Then Equation \ref{9} will be executed to produce final $X$
+Steps to produce $XtX$:
+\begin{align*}
+    X   &= X * M^{-1}\\
+    XtX &= X^T * X\\
+        &= (X * M^{-1})^T*(X * M^{-1})\\
+        &= {M^{-1}}^T*X^T*X*M^{-1}\\
+        &= {(M^{-1})}^T*(X^T*X)*(M^{-1})
+\end{align*}
+Similarly we will produce $YtX$
+\begin{align*}
+    X   &= X * M^{-1}\\
+    (YtX)_i &= {Y_c}_i^T * X\\
+        &= ({Y_c}_i^T * X) * M^{-1} 
+\end{align*}
+
+\subsubsection{\textbf{Step 4 - Maximization Step}}\hspace*{\fill} \\
+As we have mentioned earlier we are omitting the calculation of variance $\pmb{\sigma ^2}$. Therefore, our maximization step gets limited to the only computation of new $W$. As we are generating $W$ in a segmented approach, at iteration $i$ we are going to generate $W_i$ as follows:
+\begin{equation*}
+    Wi = (YtX)_i * XtX^{-1}
+\end{equation*}
+Here $(YtX)_i$ is the $YtX$ generated from $Y$ for the range of dimension corresponding to $i$.
+
+
+\section{Flow Graph and IO Operations}
+Figure \ref{flow_graph} shows the flow of the algorithm of handling tall and wide big data in a single cluster. The algorithm will start from a random state. It will randomly generate initial segments $W_1, W_2, \dots , W_n$. Then save them in  File System. At each round the algorithm will load a particular segment $W_i$ and with the corresponding dimensions of data $Y_i$ it will generate $M_i$ and $X_i$. after $n$ iterations complete $X$ and $M$ will be generated. Then using $X$, $M^{-1}$ and ${M^{-1}}^T$, it will generate $XtX$. At the same time using $Y_i$, $X$ and $M^{-1}$, it will generate particular $(YtX)_i$. Then using $XtX$ and $(YtX)_i$, the algorithm will generate new $W_i$ and store it in File System and then call the accumulation process to start for that particaulr $W_i$. \ref{tallnwide} is the Algorithm to handle tall and wide biog data in a single cluster while 
+
+\begin{figure}[!htbp]
+\centering
+\frame{\includegraphics[width=5.5in]{flow.pdf}}
+\caption{Flow Graph of Algorithm \ref{tallnwide}}
+\label{flow_graph}
+\end{figure}
+
+
+
+\begin{algorithm} [!htbp]
+  \caption{PPCA on Tall and Wide Big Data}
+  \begin{algorithmic}[1]
+  	\label{tallnwide}
+  \STATE \textbf{createMyInfo()}
+  \STATE $myInfo$ = \textit{readFile}($myInfo$)
+  \STATE Let $Range[1.....partitionCount+1]$ be an array %containing range value of $W$ 
+  \FOR {i from $1$ to $partitionCount$}
+  	\STATE $Range[i] = (i-1)\times D \div partitionCount$
+  \ENDFOR
+  \FOR {i from $1$ to $partitionCount$}
+  		\STATE $start$ = $Range[i]$  
+		\STATE $end$ = $Range[i+1]$ 
+		\STATE $W_i = $\textit{GenerateRandomW($start, end, d$)}
+		\STATE \textit{saveWInStorage($W_i$)}
+  \ENDFOR
+  \STATE $Stop\_Condition$ = $False$
+  \WHILE{($!(Stop\_Condition)$)}
+  	  \STATE $M = null$ 
+  \STATE $X = null$
+	\FOR{i from $1$ to $partitionCount$}
+		\STATE $start$ = $Range[i]$  
+		\STATE $end$ = $Range[i+1]$  
+		\STATE $W_i =$ \textit{loadWFromStorage}($start, end$)
+		\STATE $M_{new} = W_i^T \times W_i$
+		\STATE $M = M$ + $M_{new}$
+		\STATE $X_m = Y_m \times W_i$
+		\STATE \textbf{SegementedXJob($X, Y, X_m, W_i, start, end$)}
+	\ENDFOR
+	\STATE $invM = $\textit{invert($M$)}
+	\STATE $YtX = null$
+	\STATE $XtX = null$
+	\FOR{i from $1$ to $partitionCount$}
+		\STATE $s$ = $Range[i]$  
+		\STATE $e$ = $Range[i+1]$  
+		\STATE \textbf{generateYtXandXtX($YtX,XtX,X,Y,Y_m,i,s,e$)}
+		\STATE $YtX = YtX \times invM$
+		\STATE $XtX = invM^T \times XtX \times invM$
+		\STATE $Wi = YtX \times $ \textit{invert($XtX$)}
+		\STATE \textbf{startAccumulation($myInfo, i$)}
+	\ENDFOR
+  \ENDWHILE
+  \end{algorithmic}
+\end{algorithm}
+
+
+\section{Accumulation of partial results from geographically distributed clusters}
+As we mentioned earlier our data will be geographically distributed. That means we are not going to have any global view of data and no raw data passing is allowed to preserve national data sovereignty. Therefore, the partially computed results have to accumulated to produce the final result. We had the intention to minimize (a) the volume of data to be transmitted throughout the whole process and (b) accumulate the partial results in a way that will ensure the minimum accumulation time.
+The former was handled in the previous subsection. In The later part we are going to be use some graph theory properties to achieve what we desire.
+
+At each iteration of PPCA we are generating a segment of our principal subspace $W$. An arbitrary segment can can be denoted as $W_i$. Whenever one such segment is newly generated, each data cluster will call the \textbf{Accumulation} procedure from Algorithm \ref{accum}. The full accumulation process that we are proposing can be presented as follows:
+
+\subsection{\textbf{Step 1: Generating The Initial Graph}}\hspace*{\fill} \\
+The data clusters that are geographically distributed are connected by high or low bandwidth connection based on their location. According to \cite{nokia} and \cite{fujitsu}:
+\begin{itemize}
+\item Clusters that are located at the same region  generally have connection of bandwidth in the range above $100gbps$ 
+\item Clusters that are located at nearby regions  generally have connection of bandwidth in the range of $10$-$100gbps$ 
+\item Clusters that are located at different and distanced regions  generally have connection of bandwidth in the range of $1$-$10gbps$ 
+\end{itemize}
+At the start of the full PPCA process, every data cluster will check the bandwidth of the  connections of every other clusters it is connected with and generate a graph. The full process will results in a complete graph if there is an interconnection between every two data clusters. In this graph every node $v_i$ will represent a data cluster $DC_i$ while edge $e_{ij}(cost)$ between nodes  $v_i$ and  $v_j$ denotes that   $DC_i$ and $DC_j$ are connected at a b/w using which certain amount of data needs $cost$ amount of time to transmit among the two vertices. The Figure \ref{G} shows such a generated graph with $10$ data clusters.
+
+
+\begin{figure}[!htbp]
+	\centering
+	\frame{\includegraphics[width=5.2in, page=3]{t.pdf}}
+	\caption{Generated Graph $G$ According to Step-1}
+	\label{G}
+\end{figure}
+
+\subsection{\textbf{Step 2: Generating MST}}\hspace*{\fill} \\
+Using the graph generated in \textit{step 1}, every node will generate a \textit{Minimum Spanning Tree} to make a connected component with the least cost using time required to transmit data as the cost of the tree edges. 
+Figure \ref{MST} shows the MST generated from graph from Figure \ref{G}.
+
+\begin{figure}[!htbp]
+	\centering
+	\frame{\includegraphics[width=5.2in, page=1]{t.pdf}}
+	\caption{Generated MST According to Step-1 from Graph $G$}
+	\label{MST}
+\end{figure}
+
+
+\subsection{\textbf{Step 3: Sub Tree Generation for Parallel Accumulation}}\hspace*{\fill} \\
+We are going to generate two sub trees from the MST generated in \textit{Step 2} according to Algorithm \ref{algo6}. We will intended to choose the maximum time consuming edge $e_m$ and make a sub tree rooted at each of the end vertices of that edge. This will be done to make the process to use the maximum time consuming link only once while accumulating data. What we are trying to achieve is that all the data cluster nodes at each of the sub trees now can perform the accumulation task in parallel. Accumulation will be done in  bottom up direction. 
+Therefore two accumulated results will  available at the two root data nodes. At that point a single exchange will results in having the final result at each of the root node of the two sub trees.
+
+From this sub tree generation with using the node information, every data node will learn the information of its child nodes and parent nodes. During accumulation it will accumulate results from its child data nodes and notify the completion of it accumulation to its parent node.  
+
+What we keep in mind that this  subtree formulation method might create some kind of unbalanced subtree. Figure \ref{uMST} shows such an unbalanced sub tree where $subtree1$ has a total cost of $51$ and $subtree1$ has a total cost of $21$.
+
+\begin{figure}[!htbp]
+	\centering
+	\frame{\includegraphics[width=5.2in, page=1]{t1.pdf}}
+	\caption{Unbalanced Sub Tree}
+	\label{uMST}
+\end{figure}
+
+To overcome such condition, we will then make a trade off between choosing the highest time consuming link and the balanced cost of the sub trees. To make the sub tree costs more or less balanced we will try to take the next maximum time consuming link and so on. 
+
+\begin{algorithm} [!htbp]
+	\caption{createSubTree}
+	\begin{algorithmic}[1]
+	\label{algo6}
+		\STATE \textbf{Input: }$V_m$, Vertex Set of MST
+		\STATE \textbf{Input:}	$E_m$, Edge Set of MST
+		\STATE \textbf{Output: }$\{subTree1, subTree2\}$, Two Subtrees
+		\STATE sort $E_m$ according to increasing b/w
+		\STATE $done$=$Fasle$
+		\WHILE{!$done$}
+			\STATE $e$ = \textit{nextMinimumBWEdge($E_m$)}
+			\STATE $v1$ = $e.startVertex$
+			\STATE $v2$ = $e.endVertex$
+			\STATE $subTree1$ = \textit{subTree($v1$)}
+			\STATE $subTree2$ = \textit{subTree($v2$)}
+			\STATE $cost1$ = \textit{cost($subTree1$)}
+			\STATE $cost2$ = \textit{cost($subTree2$)}
+			\IF{\textit{(max($cost1,cost2$)}/\textit{min($cost1,cost2$)}$ \leq 1.5$)}
+				\STATE $done = True$
+			\ENDIF
+		\ENDWHILE	
+		\STATE \textbf{return} $\{subTree1, subTree2\}$
+	\end{algorithmic}
+\end{algorithm}
+
+
+\subsection{\textbf{Step 4: Redistribution of Final Accumulated Result}}\hspace*{\fill} \\
+Whenever each of the root nodes completes the accumulation of its own sub tree, it will wait for the other root to complete. After that it will access the partially accumulated result from the other root node and complete the full computation. At this stage it will distribute the final result by pushing it through the links connecting to its neighbours. As there will be dedicated links, the result can be sent to each of the neighbours at the same time. Whenever ant node in a sub tree receives the final result it will also redistribute it to its child nodes in the tree configuration. The job will end with the leaf data nodes receiving the final accumulated result.
+
+The Algorithm \ref{accum} is for accumulating the partial result. It will be called from every data nodes (leaf or non leaf) and according to the node information generated by Algorithm \ref{info} will communicate with other nodes in the communication tree.
+
+\begin{algorithm} [!htbp]
+\caption{startAccumulation}
+	\begin{algorithmic}[1]
+	\label{accum}
+	\STATE \textbf{Input:} $myInfo$
+	\STATE \textbf{Input:} $indexOfW$
+	\STATE $W$ = \textit{loadW($indexOfW$)} 
+	\FOR {(each $childNode$ in $myInfo.child()$)}
+		\IF{($childNode.WisReady(indexOfW)$)}
+			\STATE  $W_{child}$ = \textit{getWFromNode($childNode$)}
+			\STATE $W$ = $W$+$W_{child}$
+		\ENDIF
+	\ENDFOR
+	\STATE \textit{notifyParent($myInfo.parent$)}
+	\IF {($myInfo.rootNode$)}
+		\STATE Wait Until Other Root Node Data is Ready
+		\STATE  $W_{otherRoot}$ = \textit{getWFromNode($myInfo.otherRootNode$)}
+		\STATE $W$ = $W$+$W_{otherRoot}$
+		\STATE Announce $doneW(indexOfW)$ as $True$
+		\FOR {(each $childNode$ in $myInfo.child()$)}
+			\STATE \textit{transmit($W$)}
+			\STATE \textit{transmit($doneW(indexOfW)$)}
+		\ENDFOR
+	\ELSE
+		\WHILE{(!$doneW(indexOfW)$)}
+			\STATE \textit{wait()}
+		\ENDWHILE
+		\FOR {(each $childNode$ in $myInfo.child()$)}
+			\STATE \textit{transmit($W$)}
+			\STATE \textit{transmit($doneW(indexOfW)$)}
+		\ENDFOR
+	\ENDIF
+	
+	\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}[!htbp]
+	\caption{createMyInfo}
+	\begin{algorithmic} [1]
+	    \label{info}
+	\STATE \textbf{Input: }$V: $ Set of Clusters as Vertices
+	\STATE \textbf{Input: }$E: $ Set of Weighted Edges; b/w as Link Weights
+	\STATE \textbf{Input: }$G=\{V,E\}$ Clusters' Distribution Graph
+	\STATE $MST(V_m,E_m)$ = \textit{createMST($G$)}
+	\STATE \{$subTree1, subTree2$\} = \textbf{createSubTree($V_m,E_m$)}
+	\STATE $myInfo$ = \textit{createMyInfo($subTree1, subTree2, myID$)}
+	\STATE \textit{saveMyInfo($myInfo$)}
+	\end{algorithmic}
+\end{algorithm}
+
+\section{Communication Groups}
+From the preceding subsections we can see that there will be two types of communication:
+\begin{itemize}
+\item \textbf{Local Communication}
+This type of communication persists during the handling of tall and wide data in a single data cluster. Here all the slave data nodes of a single data cluster will work on a specific segment of the data matrix $Y$. While the single segment of $W$ will be available in every data node at a time. The master node will handle the partitioning of the data matrix while as well as the scheduling tasks. The slave nodes will work on their specific data segment and generate partial results that will be passed to the master node in order to generate the aggregated one. 
+\item \textbf{Global Communication}
+During the accumulation processes since $W_i$'s will be saved in the File System that will be under control of the master node in a data cluster only the master data nodes of different data clusters will communicate among themselves. This communication group is referred to as global communication group. 
+\end{itemize}
+The communication group are shown in Figure \ref{communication1}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \fbox{\includegraphics[width=5.2in]{communication.png}}
+    \caption{Communication Groups in TallnWide and Accumulation}
+    \label{communication1}
+\end{figure}
+
+
+
+\chapter{Contribution}
+Summarizing, our main contributions are:
+\begin{itemize}
+\item We propose an approach of PPCA that deals with geographically distributed Tall and Wide Big Data and provide an in-depth study of the relative merits against recent efficient approach \textit{sPCA}.
+\item We propose a system that builds upon Apache Spark  \cite{spark} environment and extends their functionality to support multiple data clusters learning applications.
+\item We propose an approach that will minimize the number of transfers among data centers thus minimize the inter data center bandwidth utilization.
+\item We propose an approach that will be scalable to the available hardware of the data clusters. It will allow us to handle Tall and Wide big data in commodity computers with memory even of $6/8GB$ also.
+\item We present experimental results implemented on the clusters in our undergraguate thesis laboratory. 
+\end{itemize}
+
+\chapter{Properties of our Approach}
+In this section, we analyze the computational and communication complexity of our proposed algorithm and derive some theoretical properties.
+
+\section{Computational Complexity}
+We will discuss the computational complexity for Algorithm \ref{tallnwide} that do the task of computing principal subspace $W$ pf the input data $Y$. For computational complexity analysis, we will consider a spark-like \cite{spark} distributed setting where in a data cluster each of the data nodes has a portion of full data and intermediate results are stored in-core. Specifically if there are $c$ data nodes in a single cluster and each of them have approximately $N_i \times D$ data matrix $Y_i$, then we can write:
+ $$Y = \sum _{i=1}^c Y_i$$
+We assume the partition count of $W$ to be $p$. if every segment of $W$ is of size $D_i \times d$ where $d$ is number of principal components to be computed. Then we can write:
+$$W = \sum _{i=1}^p W_i$$
+
+Now our Algorithm \ref{tallnwide} has three different parts.
+
+From line 7 to 12 a \textbf{For Loop} is generating initial random $W_i$'s. Here the running time is $\mathcal{O}(pD_id)$
+
+From line 17 to 24 another \textbf{For Loop} is there to compute $X$ of Equation \ref{5} and \ref{6}. Here tasks of line 20-24 will have a time complexity of $\mathcal{O}(D_id+d^2+d+d+N_iD_id)$. That makes the aggregated runtime of this for loop $\mathcal{O}(pN_iD_id)$.
+
+From line 29 to 37 another \textbf{For Loop} is generating $XtX$ and $YtX$, fining at generating new $W_i$. Therefore line 32-35 will have a time complexity of $\mathcal{O}(N_id^2 + D_iN_id+D_id^2+d^4 + D_id^2)$. That makes the aggregated runtime of this for loop $\mathcal{O}(pN_iD_id)$.
+
+Therefore, if \textbf{While Loop} of line 14 runs for $r$ rounds then the total run time is going to be $\mathcal{O}(2rpN_iD_id)$.
+
+\section{Communication Complexity}
+The approach is highly communication intensive. At the end of generating each new segment of principal subspace $W$ each data cluster will call Algorithm \ref{accum} as a background process. This will make a data cluster to accumulate from its child nodes and give a notification to its parent. Each accumulation demands the transmission of a $D_i \times d$ matrix where $D_i$ varies with the number of partition is done on $W$. As partition information i.e. $D_i$ is available at the start of the process the communication tree generation can be done based on the available bandwidth between any two data clusters and the time required to transmit data of that size. For simplicity we assume the availability of dedicate bandwidth between any two data clusters.Under these assumptions, the time needed to make the accumulated result of a subtree available at the root node of that subtree is equal to the maximum aggregated time of any path from root to leaf node. If such paths are $P_1$ and $P_2$ of $subTree1$ and $subTree2$ respectively and maximum time consuming link time is $max\_time$, then the time of communication will be $$max\_time+2*max(time(P_1),time(P_2))$$ 
+The $2$ is added as accumulated data will be redistributed in the same paths. In Figure \ref{fig:comm} the maximum time consumtioon link has a time of $27$ units the gray shaded paths has the maximum time consumption of $46$ and $31$ units. Therefore the communication time of accumulating one segement of $W$ will be $$27+2*max(46,31) = 119\ units$$ 
+
+\begin{figure}
+    \centering
+    \frame{\includegraphics[width=5.2in]{com.pdf}}
+    \caption{Communication Complexity}
+    \label{fig:comm}
+\end{figure}
+
+
+
+\chapter{Implementation in Spark Cluster System}
+We implemented our proposed system on Spark \cite{spark} cluster computing system. Spark gives us various types of storage system. Spark provides resilient distributed datasets (RDDs) and parallel operations on these datasets. Resilient Distributed Datasets (RDD) is a fundamental data structure of Spark \cite{spark-site}. It is an immutable distributed collection of objects. Each dataset in RDD is divided into logical partitions, which may be computed on different nodes of the cluster. From user level the persistanc of RDD can be controlled. It can be cached in memory or store on disk to be used later through IO operations. Moreover the user can control its partitioning process like partition by key.
+
+In case of small data that can be kept in memory while computing, we did the in-memory computations by making the input matrix $Y$ persistent in the memory of the machines of our spark cluster. Therefore we could perform faster distributed operations on our data. On the other hand, for clusters with small count of nodes i.e. small amount of memory, we have to make IO operations by keeping the data on disks and load a specific segment of it while needed. 
+The Algorithms \ref{segmented1} and \ref{segmented2} are based on the Spark Programming. 
+
+
+
+
+
+
+
+\begin{algorithm} [!htbp]
+  \caption{SegmentedXJob($X,Y,X_m,W,start,end$)}
+  \begin{algorithmic} [1]
+\label{segmented1}
+	\STATE $Y_nX$ = $Y$.zip($X$)
+	\STATE $X$ = $Y_nX$.map\{($Y_nX$)$_i \Rightarrow$
+	        \STATE \tab $Y_i$ = ($Y_nX$)$_i$.\textit{arg0()}.\textit{range}($start,end$)
+			\STATE \tab $X_i$ = ($Y_nX$)$_i$.\textit{arg1()}
+			\STATE \tab dotRes = $Y_i \times W$
+			\STATE \tab $X_i$ = $X_i$ + dotRes - $(X_m)_i$
+			\STATE \}
+  \end{algorithmic}
+\end{algorithm}
+
+
+
+\begin{algorithm} [!htbp]
+  \caption{SegmentedXJob($YtX,XtX,X,Y,Y_m,i,s,e$)}
+  \begin{algorithmic} [1]
+\label{segmented2}
+	\STATE $Y_nX$ = $Y$.zip($X$)
+	 \IF{($i == 1$)}
+	 		\STATE $YtXSum = spark.accumultor(newMatrix(D,d))$
+			\STATE $XtXSum = spark.accumultor(newMatrix(D,d))$
+	 		\STATE $Y_nX$.map\{($Y_nX$)$_i \Rightarrow$
+	 		\STATE \tab $Y_i$ = ($Y_nX$)$_i$.\textit{arg0()}.\textit{range}($s,e$)
+			\STATE \tab $X_i$ = ($Y_nX$)$_i$.\textit{arg1()}
+			\STATE \tab $(YtX)_i$ = $Y_i^T \times  X_i$ - $Y_m^T \times X_i$   
+			\STATE \tab $(XtX)_i$ = $X_i^T \times  X_i$
+			 \STATE \tab $YtXSum$.\textit{add($(YtX)_i$)}
+			 \STATE \tab $XtXSum$.\textit{add($(XtX)_i$)}
+			\STATE \}
+		\STATE $YtX = YtXSum$.\textit{value()}
+		\STATE $XtX = XtXSum$.\textit{value()}
+	\ELSE
+			\STATE $YtXSum = spark.accumultor(newMatrix(D,d))$
+	 		\STATE $Y_nX$.map\{($Y_nX$)$_i \Rightarrow$
+			\STATE \tab $Y_i$ = ($Y_nX$)$_i$.\textit{arg0()}.\textit{range}($s,e$)
+			\STATE \tab $X_i$ = ($Y_nX$)$_i$.\textit{arg1()}
+			\STATE \tab $(YtX)_i$ = $Y_i^T \times  X_i$ - $Y_m^T \times X_i$   
+			 \STATE \tab $YtXSum$.\textit{add($(YtX)_i$)}
+			\STATE \}
+		\STATE $YtX = YtXSum$.\textit{value()}
+	 \ENDIF
+  \end{algorithmic}
+\end{algorithm}
+
+\chapter{Experimental Evaluation}
+In this chapter we will present our experimental result that we found while implementing our approach in \textit{Spark} Cluster computing system.
+\section{Cluster Setup}
+We built \textit{Spark} clusters in our \textit{Undergraduate Thesis Lab}. To evaluate the performance of the method to handle \textit{Tall and Wide Big Data}, we created clusters that was composed of three machines with one master node and two slave nodes. Each of the machines had $64GB$ of memory and quad core processor of $3.6GHz$. That makes our cluster with $12$ cores of processor to work with. We installed \textit{Apache Spark 2.0} with \textit{\textit{Hadoop} 2.7} for \textit{HDFS}.
+
+On the other hand, to test the accumulation process, we created 8 spark clusters each of which contained only one slave node. as we did not have that amount of machines in a single cluster, we used small dimensional data to test this part of the method.
+
+
+
+
+\section{Data Sets}
+We use two real datasets. These data sets contains data of different types and of different sizes. The dimensionalities are also different. The datasets are:
+
+\begin{itemize}
+\item \textbf{Amazon Product Ratings}\hspace*{\fill} \\
+This data set is from \textit{Amazon} web sites that includes the user ratings on various products items. In the raw data, it contains three columns: 1) unique User ID, 2) unique Product ID, 3) Product Rating. To make it easily fit in our system we gave each of the User ID and Product ID a number. There was $21\ millions$ user id's and $9\ millions$ product id's. That makes it $21M \times 9M$ sparse data matrix. In the matrix if cell ($x,y$) have a number $z$, that means user $x$ has given a rating $z$ to the product $y$. The raw data was of size $4.73GB$
+\item \textbf{Twitter Follower Relationship}\hspace*{\fill} \\
+This data set is of \textit{Twitter} that includes the follower information of every user ID. The raw data has two columns: two User IDs. The first User ID is followed by the second one. The maximum user Id is $61578414$. That makes it a data set where every data sample has a dimension of $61M$ while it has $61M$ rows that makes it a data set of $61M \times 61M$. a $1$ in cell $(x,y)$ indicates that user $y$ follows user $x$ while a $0$ indicates the negatively. The raw data was of size $26.17GB$
+\end{itemize}
+
+\section{Performance Metrics}
+We did not have much opportunity to compare our method with others as there are no other algorithm that can handle geo-distributed tall and wide big data. Though the \textit{sPCA} \cite{elgamal} showed some kind of implementation of PPCA in a distributed cluster, it also fails to run on very large dimensional data. Moreover, it has no method to accumulate partial data from different geographic locations. 
+
+\subsection{Partition Count of $W$}
+In case of handling Tall and Wide data in a single cluster we made partitions of the principal subspace $W$. However, one of the limitations of our method is that we could not find a optimum partition count based on the data size and available resources. Rather we gathered some empirical results by giving manual input on the partition count. Table \ref{tab:amazon_partition} shows the influence of no of partitions on the total running time and IO operation time of the data matrix of \textit{Amazon Product Rating} Dataset. As at a time, we are working on a single partition of $W$ and also creating a single partition of $W$, we had to allow IO operations. We had to load and store $W_i$ while working on 
+the range of dimension of our data matrix $Y$ corresponding to the subscript $i$. Table \ref{tab:twitter_partition} shows the same information for data matrix of \textit{Twitter Follower} Dataset.
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    Memory &Data Size &Partitions &Iterations &Runtime &IO Time \\
+    \hline
+    \multirow{4}{17pt}{$6GB$}  & \multirow{4}{7em}{$21M \times 9.8M$} &15  &7		&18.0 Hrs   	  &65 Mins\\
+    \cline{3-6}
+         & & 13 &8		&18.5 Hrs   	  &50 Mins\\
+    \cline{3-6}
+         & & 11 &7		&14.1 Hrs   	  &44 Mins\\
+    \cline{3-6}
+         & & 10 &\multicolumn{3}{|c|}{Failed} \\
+    \hline
+    
+    \multirow{4}{17pt}{$8GB$}  & \multirow{4}{7em}{$21M \times 9.8M$} &12  &8		&9.8 Hrs   	  &61 Mins\\
+    \cline{3-6}
+         & & 11 &7		&9.5 Hrs     	  &57 Mins\\
+    \cline{3-6}
+         & & 10 &6		&5.5 Hrs   	  &50 Mins\\
+    \cline{3-6}
+         & & 9 &\multicolumn{3}{|c|}{Failed} \\
+    \hline
+    
+    \multirow{4}{17pt}{$8GB$}  & \multirow{4}{7em}{$10M \times 7M$} &9  &8		 &5.3 Hrs   	  &41 Mins\\
+    \cline{3-6}
+         & & 8 &7		 &4.1 Hrs    	  &38 Mins\\
+    \cline{3-6}
+         & & 7 &\multicolumn{3}{|c|}{Failed} \\
+    \hline
+    \multicolumn{6}{c}{}
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:amazon_partition}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    Memory &Data Size &Partitions &Iterations &Runtime &IO Time \\
+    \hline
+    \multirow{4}{17pt}{$8GB$}  & \multirow{4}{7em}{$61M \times 61M$} &22  &6		&91.1 Hrs   	  &345 Mins\\
+    \cline{3-6}
+         & & 20 &7		&108.5 Hrs   	  &397 Mins\\
+    \cline{3-6}
+         & & 19 &\multicolumn{3}{|c|}{Failed} \\
+    \hline
+    
+    \multirow{4}{17pt}{$12GB$}  & \multirow{4}{7em}{$61M \times 61M$} &20  &8		&99.3 Hrs   	  &405 Mins\\
+    \cline{3-6}
+         & & 18 &7		&87.4 Hrs   	  &317 Mins\\
+    \cline{3-6}
+         & & 17 &\multicolumn{3}{|c|}{Failed} \\
+    \hline
+    \multicolumn{6}{c}{}
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:twitter_partition}
+\end{table}
+
+\subsection{Running Time}
+We compare our Spark implementation with \textit{sPCA}. It should be noted that for higher dimensional data \textit{sPCA} will fail to run. As a result, we will not be able to make a comparison for such data samples.
+
+\subsubsection{Time to Achieve Target Accuracy}
+We compare our spark implementation with sPCA-Spark based on the time needed to reach our desired convergence point. We varied the size of the input dataset in two ways 1) change dimension size for fixed sample count and 2) change sample count for a fixed dimesnion size. Then we measured the time needed for our implementaion as well as \textit{sPCA-Spark}. The comparison results is shown in Figures \ref{comp:N} and \ref{comp:D}. We used the dataset of \textbf{Amazon Product Ratings}.
+
+In Figure \ref{comp:N} we varied the sample count of the input data matrix. However, we kept the same dimension i.e. column count ($80$ thousands in number). The figure shows that the running times for our implementation is higher than that of the \textit{sPCA}. We had a different approach of implementation that increases the sequential tasks in our algorithm. We had to make this trade off in order to handle the higher dimension of data. 
+
+\begin{figure}[!htbp]
+    \centering
+    %\frame{\includegraphics{}}
+    \caption{Running Time per Iteration Comparison with \textit{sPCA} for $21M$ Sample Count}
+    \label{comp:N}
+\end{figure}
+
+In Figure \ref{comp:D} we varied the dimension of each sample of the input data matrix. However, we kept the sample count i.e. row count ($21$ millions in number). The figure shows that the running times for our implementation is little bit higher than that of \textit{sPCA}. However \textit{sPCA} failed to run for data with dimension larger than $140K$ and our algorithm was successful to perform PPCA on data with those higher dimension showed in the graph. The graph shows dimension up to $2M$ while for this dataset we run our algorithm for data with dimension up to $9.8M$. 
+
+\begin{figure}[!htbp]
+    \centering
+    %\frame{\includegraphics{}}
+    \caption{Running Time per Iteration Comparison with \textit{sPCA} for $0.08M$ Dimensional Data}
+    \label{comp:D}
+\end{figure}
+
+
+\input{conclusion.tex}
+
+% Bibliographies and appendices
+%\input{bibliography.tex}
+\input{buetcseugthesisbibliography.tex}
+
+% Index, comment this out if you do not want to create an index
+\printindex
+
+\appendix
+
+%Linear Algebra
+\chapter{Linear Algebra}
+	\label{ch:linear}	
+This section proves a few unapparent theorems in linear algebra, which are crucial to this thesis.
+
+\section{The inverse of an orthogonal matrix is its transpose.}
+Let $A$ be an $m\times n$ orthogonal matrix where $a_i$ is the $i^{th}$ column vector. The $i j^{th}$ element of $A^T A$ is
+
+$$ (A^T A)_{ij} = a_i^T a_j = \begin{cases}
+1 & \text{if $i = j$} \\
+0 & \text{otherwise} 
+\end{cases} $$
+
+Therefore, because $A^T A = I$, it follows that $A^{-1} = A^T$.
+
+\section{For any matrix $\pmb{A}$, $\pmb{A^TA}$ and $\pmb{AA^T}$ are symmetric.}
+
+$$ \pmb{(A A^T)^T = A^{TT}A^T = A A^T} $$
+
+$$\pmb{(A^TA)^T = A^TA^{TT} = A^T A} $$
+
+\section{A matrix is symmetric if and only if it is orthogonally diagonalizable.}
+Because this statement is bi-directional, it requires a two-part ``if-and-only-if'' proof. One needs to prove the forward and the backwards ``if-then'' case.
+
+Let us start with the forward case. If $A$ is orthogonally diagonalizable, then $A$ is a symmetric matrix. By hypothesis, orthogonally diagonalizable means that there exists some $E$ such that $A=EDE^T$ , where D is a diagonal matrix and E is some special matrix which diagonalizes $A$. Let us compute $A^T$.
+
+$$ \pmb{A^T = (EDE^T)^T = E^{TT}D^TE^T = EDE^T = A }$$
+
+Evidently, if $A$ is orthogonally diagonalizable, if must also be symmetric.
+
+The reverse case is more involved and less clean so it will be
+left to the reader. In lieu of this, hopefully the ``forward'' case
+is suggestive if not somewhat convincing.
+
+\section{A symmetric matrix is diagonalized by a matrix of its orthonormal eigenvectors.}
+Let $A$ be a square $n\times n$ symmetric matrix with associated eigenvectors $\{e_1,e_2,...,e_n\}.$ Let $E = [e_1 e_2 ... e_n]$ where the $i^{th}$ column of $E$ is the eigenvector $e_i$. This theorem asserts that there exists a diagonal matrix D such that $ A = EDE^T$.
+
+This proof is in two parts. In the first part, we see that the any matrix has the special property that all of its eigenvectors are not just linearly independent but also orthogonal, thus completing our proof.
+
+In the first part of the proof, let A be just some matrix, not
+necessarily symmetric, and let it have independent eigenvectors (i.e. no degeneracy). Furthermore, let E = [e1 e2 ::: en]
+be the matrix of eigenvectors placed in the columns. Let D be
+a diagonal matrix where the ith eigenvalue is placed in the iith
+position.
+
+We will now show that AE = ED. We can examine the columns of the right-hand and left-hand sides of the equation.
+
+\begin{center}
+	Let hand side: $ AE = [Ae_1 Ae_2 ... Ae_n]$
+\end{center}
+\begin{center}
+	Right hand side: $ ED = [\lambda_1 e_1 \lambda_2 e_2 ... \lambda_n e_n]$
+\end{center}
+
+Evidently, if $AE = ED$ then $Ae_i = \lambda_i e_i$ for all i. This equation is 
+the definition of the eigenvalue equation. Therefore,it must be that $AE = ED$. A little rearrangement provides $A = EDE^{-1}$, completing the first part the proof.
+
+
+For the second part of the proof, we show that a symmetric matrix always has orthogonal eigenvectors. For some symmetric matrix, let $\lambda_1$ and $\lambda_2$ be distinct eigenvalues for eigenvectors $e_1$ and $e_2$.
+
+$$ \lambda_1 e_1 .e_2 = (\lambda_1 e_1)^T e_2$$
+$$ = (Ae_1)^T e_2 $$
+$$ = e_1^T A^T e_2 $$
+$$ = e_1^T A e_2 $$
+$$ = e_1^T(\lambda_2 e_2) $$
+$$ \lambda_1 e_1 .e_2 = \lambda_2 e_1.e_2 $$
+
+By the last relation we can equate that $(\lambda_1-\lambda_2)e_1 .e_2 = 0$. Since we have conjectured that the eigenvalues are in fact unique, it must be the case that $e_1 · e_2 = 0$. Therefore, the eigenvectors of a symmetric matrix are orthogonal.
+
+
+Let us back up now to our original postulate that $A$ is a symmetric matrix. By the second part of the proof, we know that the eigenvectors of $A$ are all orthonormal (we choose the eigenvectors to be normalized). This means that $E$ is an orthogonal matrix so by theorem 1, $E^T = E^{-1}$ and we can rewrite the final result.
+
+$$ A = EDE^T $$
+
+Thus, a symmetric matrix is diagonalized by a matrix of its eigenvectors.
+
+
+% Algorithms
+%\input{buetcseugthesisalgorithms.tex}
+
+% Codes
+%\input{buetcseugthesiscodes.tex}
+
+\end{document}

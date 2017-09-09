@@ -1,0 +1,66 @@
+\begin{thebibliography}{1}
+
+\bibitem{1}
+Matei Zaharia et al. Resilient distributed datasets: A fault-tolerant abstraction for in-memory cluster computing. In NSDI, 2012.
+
+
+\bibitem{2}
+Yucheng Low et al. Distributed GraphLab: A Framework for Machine Learning and Data Mining in the Cloud. PVLDB, 2012.
+
+\bibitem{3}
+Mu Li et al. Scaling distributed machine learning with the parameter server. In OSDI, 2014.
+
+\bibitem{4} 
+Ashish Thusoo et al. Data warehousing and analytics infrastructure at Facebook. SIGMOD, 2010.
+
+\bibitem{5}
+George Lee et al. The unified logging infrastructure for data analytics at Twitter. PVLDB, 2012.
+
+\bibitem{6}
+Aditya Auradkar et al. Data infrastructure at linkedIn. In ICDE, 2012.
+
+\bibitem{7}
+Ariel Rabkin et al. Aggregation and degradation in jetstream: Streaming analytics in the wide area. In NSDI, 2014.
+
+\bibitem{8}
+Ashish Vulimiri et al. Global analytics in the face of bandwidth and regulatory constraints. In NSDI, 2015.
+
+\bibitem{9}
+Nikolaos Laoutaris et al. Inter-datacenter bulk transfers with netstitcher. In SIGCOMM, 2011.
+
+\bibitem{10}
+Albert Greenberg et al. The cost of a cloud: research problems in data center networks. SIGCOMM, 2008.
+
+\bibitem{11}
+Martin Rost and Kirsten Bock. Privacy by design and the new protection goals. DuD, January, 2011.
+
+\bibitem{12}
+European Commission press release. Commission to pursue role as honest broker in future global negotiations on internet governance. \url{http: //europa.eu/rapid/press-release IP-14-142 en.htm}.
+
+\bibitem{13}
+Principal component analysis: \url{https://en.wikipedia.org/wiki/Principal_component_analysis}.
+
+\bibitem{14}
+J. Shlens. A tutorial on principal component analysis. \textit{arXiv preprint
+arXiv:1404.1100}. 2014.
+
+\bibitem{elgamal}
+T. Elgamal and M. Hefeeda. Analysis of pca algorithms in distributed environments. \textit{arXiv preprint arXiv:1503.05214}. 2015.
+
+\bibitem{16}
+N. P. Halko. Randomized methods for computing low-rank approx- imations of matrices. Ph.D. dissertation, Boulder, CO, USA, 2012, aAI3507998.
+
+\bibitem{17}
+M. E. Tipping and C. M. Bishop. Probabilistic principal component analysis. \textit{Journal of the Royal Statistical Society: Series B (Statistical Methodology), vol. 61, no. 3, pp. 611–622}. 1999.
+
+\bibitem{18}
+S. Roweis. Em algorithms for pca and spca. \textit{Advances in neural information processing systems, pp. 626–632} 1998.
+
+\bibitem{33}
+
+H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+\end{thebibliography}
+
+\endinput

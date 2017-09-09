@@ -1,0 +1,30 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Centralized Approach\relax }}{2}{figure.caption.6}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Distributed Approach\relax }}{3}{figure.caption.7}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A spectrum of possible redundancies in data from the two separate measurements $r_1$ and $r_2$. The two measurements on the left are uncorrelated because one can not predict one from the other. Conversely, the two measurements on the right are highly correlated indicating highly redundant measurements.\relax }}{19}{figure.caption.8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A typical 2D example. The signal and noise variances $\sigma ^2_{signal}$ and $\sigma ^2_{noise}$ are graphically represented by the two lines subtending the cloud of data. The largest direction of variance lie along the best-fit line\relax }}{21}{figure.caption.9}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Construction of the matrix form of SVD \ref {eq4} from the scalar form \ref {eq3}\relax }}{25}{figure.caption.10}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Communication Groups\relax }}{41}{figure.caption.22}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Graphical Interpretation of Learning Algorithm \relax }}{42}{figure.caption.23}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Time Required vs Data Size graph of our Distributed Approach\relax }}{44}{figure.caption.24}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Comparison graph between centralized and distributed approach\relax }}{44}{figure.caption.25}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Comparison graph based on number of instances\relax }}{45}{figure.caption.26}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Flow Graph of Algorithm \ref {tallnwide}\relax }}{50}{figure.caption.28}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Generated Graph $G$ According to Step-1\relax }}{53}{figure.caption.29}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Generated MST According to Step-1 from Graph $G$\relax }}{53}{figure.caption.30}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Unbalanced Sub Tree\relax }}{54}{figure.caption.31}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Communication Groups in TallnWide and Accumulation\relax }}{57}{figure.caption.32}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Communication Complexity\relax }}{61}{figure.caption.33}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Running Time per Iteration Comparison with \textit {sPCA} for $21M$ Sample Count\relax }}{67}{figure.caption.37}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Running Time per Iteration Comparison with \textit {sPCA} for $0.08M$ Dimensional Data\relax }}{67}{figure.caption.38}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

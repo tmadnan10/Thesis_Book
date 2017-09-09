@@ -1,0 +1,20 @@
+\chapter{Conclusion}
+In this chapter we draw our concluding remarks and some future works that can possibly improve our present work at  a large scale.
+\section{Concluding remarks}
+In this paper, we tried to analyze various issues of computing the principal components of an input data matrix which has large number of data samples while each of the samples has very large dimension. We characterized this kind of data as \textit{Tall and Wide Big Data}. In addition the data is distributed at different geographic locations. Our analysis also indicated that the present algorithms for performing \textit{PCA} are not capable of performing the task on such data sets. We presented a new approach and implementation for PCA that is capable of handling big data with very large dimension and can accumulate the partial results from different geographic locations in an efficient way. Our approach is based on the probabilistic PCA (PPCA) algorithm defined in \cite{bishop}. We implemented this method on Spark platform and showed that it did the job significantly well.  
+\section{Future Works}
+There are some issues that we were not capable of solving. Therefore, in future these issues can be handled to make our method a more effective one.
+\subsection{Capability of Computing Accuracy and Error}
+As stated earlier we could not calculate the error and accuracy. In \cite{elgamal}, they measure the accuracy by computing the 1-Norm of the reconstruction error, which is given by: $e = ||Y −X * C^{−1}||_1$. Although this provides a common way to compare the accuracy of different algorithms, the reconstruction error is a big, dense matrix which is costly to store and process. They reduce the cost of storage by computing the error row by row, avoiding the need to store the large reconstruction matrix in the file system. Nevertheless, iterating over the resulting dense rows is still time consuming. They reduce this time by measuring the error only on a random subset of the rows. To have a unique way to interpret the measured error, independent of the sampling rate or matrix size, they report the norm of the reconstruction error divided by the norm of the matrix made up of the randomly selected rows, which is:
+$$e=||Y_r−X_r*C^{−1}||_1/||Y_r||_1$$
+In addition, they measure the ideal accuracy that can be achieved with 50 principal components after a large number of iterations. After each iteration, they report the percentage of the ideal accuracy that is achieved.
+
+However, in our case as we are working with very large sized data and so even after applying all the improvements, we failed to find the actual error and accuracy. Therefore, we had to use different approach to check the convergence.
+\subsection{Designing Better Stop Condition}
+The stop condition was not that much up to the mark in our method. As we were not able to find the actual accuracy and error rate, it results in an alternative approach in stop condition. However, using current accuracy and actual accuracy ratio a better stop condition can be designed.
+\subsection{Designing Optimum Partition Count of Principal Subspace $W$}
+In case of handling Tall and Wide data in a single cluster we made partitions of the principal subspace $W$. However, one of the limitations of our method is that we could not find a optimum partition count based on the data size and available resources. Rather we gathered some empirical results by giving manual input on the partition count. In future it would be a good work to find a formula to calculate the minimum number of partition at which the cluster  can handle that particular wide data.
+\subsection{Improved Implementation for Dense Matrix Data}
+We did our evaluation on sparse matrix. However, we did not give proper and optimized implementation for dense matrices. In future we intend to do the optimization so that it can handle tall and wide dense data also.
+
+\endinput

@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+
+\bibitem{dataanalysis}
+Wikipedia link: \texttt{\url{https://en.wikipedia.org/wiki/Data_analysis}}
+
+\bibitem{01}
+``Analyze quality in life in u.s. cities using pca - matlab and simulink''.
+
+\bibitem{sovereign}
+\texttt{\url{http://whatis.techtarget.com/definition/data-sovereignty}}
+
+\bibitem{dparallel}
+\texttt{\url{https://en.wikipedia.org/wiki/Data_parallelism}}
+
+\bibitem{normal}
+\texttt{\url{https://en.wikipedia.org/wiki/Normal_distribution}}
+
+\bibitem{mparallel}
+\texttt{\url{https://www.quora.com/What-is-the-difference-between-model\\-parallelism-and-data-parallelism}}
+
+\bibitem{tensor}
+\texttt{\url{https://www.tensorflow.org/}}
+
+\bibitem{1}
+Matei Zaharia et al. Resilient distributed datasets: A fault-tolerant abstraction for in-memory cluster computing. In NSDI, 2012.
+
+
+\bibitem{2}
+Yucheng Low et al. Distributed GraphLab: A Framework for Machine Learning and Data Mining in the Cloud. PVLDB, 2012.
+
+\bibitem{3}
+Mu Li et al. Scaling distributed machine learning with the parameter server. In OSDI, 2014.
+
+\bibitem{4} 
+Ashish Thusoo et al. Data warehousing and analytics infrastructure at Facebook. SIGMOD, 2010.
+
+\bibitem{5}
+George Lee et al. The unified logging infrastructure for data analytics at Twitter. PVLDB, 2012.
+
+\bibitem{6}
+Aditya Auradkar et al. Data infrastructure at linkedIn. In ICDE, 2012.
+
+\bibitem{7}
+Ariel Rabkin et al. Aggregation and degradation in jetstream: Streaming analytics in the wide area. In NSDI, 2014.
+
+\bibitem{8}
+Ashish Vulimiri et al. Global analytics in the face of bandwidth and regulatory constraints. In NSDI, 2015.
+
+\bibitem{9}
+Nikolaos Laoutaris et al. Inter-datacenter bulk transfers with netstitcher. In SIGCOMM, 2011.
+
+\bibitem{10}
+Albert Greenberg et al. The cost of a cloud: research problems in data center networks. SIGCOMM, 2008.
+
+\bibitem{11}
+Martin Rost and Kirsten Bock. Privacy by design and the new protection goals. DuD, January, 2011.
+
+\bibitem{12}
+European Commission press release. Commission to pursue role as honest broker in future global negotiations on internet governance. \url{http: //europa.eu/rapid/press-release IP-14-142 en.htm}.
+
+\bibitem{13}
+Principal component analysis: \url{https://en.wikipedia.org/wiki/Principal_component_analysis}.
+
+\bibitem{14}
+J. Shlens. A tutorial on principal component analysis. \textit{arXiv preprint
+arXiv:1404.1100}. 2014.
+
+\bibitem{elgamal}
+T. Elgamal and M. Hefeeda. Analysis of pca algorithms in distributed environments. \textit{arXiv preprint arXiv:1503.05214}. 2015.
+
+\bibitem{16}
+N. P. Halko. Randomized methods for computing low-rank approx- imations of matrices. Ph.D. dissertation, Boulder, CO, USA, 2012, aAI3507998.
+
+\bibitem{17}
+M. E. Tipping and C. M. Bishop. Probabilistic principal component analysis. \textit{Journal of the Royal Statistical Society: Series B (Statistical Methodology), vol. 61, no. 3, pp. 611?622}. 1999.
+
+\bibitem{18}
+S. Roweis. Em algorithms for pca and spca. \textit{Advances in neural information processing systems, pp. 626?632} 1998.
+
+\bibitem{pca}
+I. Jolliffe. Principal component analysis. 1986. 1986.
+
+\bibitem{kraska}
+T. Kraska, A. Talwalkar, J. C. Duchi, R. Griffith, M. J.
+Franklin, and M. I. Jordan. MLbase: A distributed machine-learning system. In \textit{Proc. Conf. on Innovative Data Systems Research (CIDR), 2013}.
+
+\bibitem{golub}
+G. Golub and C. E. Reinsch. Singular value decomposition and least squares solutions. \textit{Numerische Mathematik}, 14(5), 1970.
+
+\bibitem{demmel}
+J. Demmel and W. Kahan. Accurate singular values of bidiagonal matrices. \textit{SIAM J. Sci. Stat. Comput}, 11(5), 1990.
+
+\bibitem{roman}
+V. Hernandez, J. Roman, and A. Tomas. A robust and efficient parallel SVD solver based on restarted Lanczos bidiagonalization. \textit{Electronic Transactions on Numerical Analysis}, 31, 2008.
+
+\bibitem{halko}
+N. P. Halko. Randomized methods for computing low-rank approximations of matrices. \textit{PhD thesis, University of Colorado}, 2012.
+
+\bibitem{bishop}
+M. E. Tipping and C. M. Bishop. \textit{Mixtures of probabilistic principal component analysers}. \textit{Neural Computation, 11(2)}, 1999.
+
+\bibitem{nokia}
+Nokia White Paper. \textit{Datacenter interconnect market trends and requirements}.
+weblink: \texttt{\url{https://resources.ext.nokia.com/?cid=181666}}
+
+\bibitem{fujitsu}
+Fujitsu White Paper. \textit{Application Note: Data Center Interconnect}.
+weblink: \texttt{\url{http://www.fujitsu.com/us/Images/Data-Center-Interconnect-app-note.pdf}}
+
+\bibitem{spark}
+M. Zaharia, M. Chowdhury, T. Das, A. Dave, J. Ma,
+M. McCauley, M. J. Franklin, S. Shenker, and I. Stoica. Resilient distributed datasets: A fault-tolerant abstraction for in-memory cluster computing. In Proc. \textit{USENIX Conf. on Networked Systems Design and Implementation (NSDI)}, NSDI’12. USENIX Association, 2012.
+
+\bibitem{spark-site}
+Tutorials Point Tutorial. weblink: \texttt{\url{https://www.tutorialspoint.com/apache_spark/apache_spark_rdd.htm}}
+
+\bibitem{116}
+Tutorials Point Tutorial. weblink: \texttt{\url{https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm}}
+
+
+\bibitem{117}
+Soumen Chakrabarti, James Demmel, 	Katherine Yelick. Modeling the benefits of mixed data and task parallelism. \textit{SPAA '95 Proceedings of the seventh annual ACM symposium on Parallel algorithms and architectures. Pages 74-83 }
+
+
+
+
+\end{thebibliography}
+
+
