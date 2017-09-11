@@ -1,124 +1,125 @@
 \contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {CANDIDATES' DECLARATION}}}}{i}{DTLrowi.2.1}
-\contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {CERTIFICATION}}}}{ii}{DTLrowi.4.3}
+\contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {CERTIFICATION}}}}{ii}{DTLrowi.4.2}
 \contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {ACKNOWLEDGEMENT}}}}{iii}{DTLrowi.6.1}
 \contentsline {chapter}{List of Figures}{viii}{section*.3}
 \contentsline {chapter}{List of Tables}{ix}{section*.4}
 \contentsline {chapter}{List of Algorithms}{x}{section*.4}
 \contentsline {chapter}{\textbf {\relax \fontsize {12}{14.5}\selectfont \abovedisplayskip 12\p@ plus3\p@ minus7\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \belowdisplayskip \abovedisplayskip \let \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\emph {ABSTRACT}}}}{xi}{chapter*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Data Analysis Approaches }{2}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Centralized Approach}{2}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Distributed Approach}{3}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Probabilistic PCA (PPCA) on Big Data}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Contribution}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Organization of this Book}{4}{section.1.4}
 \contentsline {chapter}{\numberline {2}Basic Terminologies}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Big Data}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Data Analysis}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Geo Distributed Data}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}Data Sovereignty}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}Data Cluster and Cluster Computing}{7}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Advantages}{7}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Disadvantages}{7}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Data Parallelism}{8}{section.2.6}
-\contentsline {section}{\numberline {2.7}Model Parallelism}{8}{section.2.7}
-\contentsline {section}{\numberline {2.8}TensorFlow}{8}{section.2.8}
-\contentsline {section}{\numberline {2.9}\textit {Hadoop} Cluster}{9}{section.2.9}
-\contentsline {section}{\numberline {2.10}\textit {Hadoop} MapReduce}{9}{section.2.10}
-\contentsline {section}{\numberline {2.11}Spark Cluster}{10}{section.2.11}
-\contentsline {section}{\numberline {2.12}Dimensionality Reduction}{10}{section.2.12}
-\contentsline {section}{\numberline {2.13}Vector Norms}{10}{section.2.13}
-\contentsline {section}{\numberline {2.14}p-Norm}{11}{section.2.14}
-\contentsline {section}{\numberline {2.15}Frobenius Norm}{11}{section.2.15}
-\contentsline {section}{\numberline {2.16}Normal Distribution}{12}{section.2.16}
-\contentsline {section}{\numberline {2.17}Matrix Diagonalization}{12}{section.2.17}
-\contentsline {section}{\numberline {2.18}Expectation Maximization (EM) Algorithm}{14}{section.2.18}
-\contentsline {section}{\numberline {2.19}Stop Condition}{14}{section.2.19}
-\contentsline {chapter}{\numberline {3}PCA as a Data Analytic Tool}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Assumptions Involved in PCA}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}PCA and Change of Basis}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Eigenvalue Decomposition (EVD)}{18}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Covariance Matrix}{18}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Diagonalize the Covariance Matrix}{20}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Solving PCA in EVD Approach}{21}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Practical Approach of EVD}{23}{section.3.4}
-\contentsline {section}{\numberline {3.5}Singular Value Decomposition (SVD)}{23}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Performing SVD}{23}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Linking SVD with EVD}{24}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}SVD for Dense Matrices}{26}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}SVD for Sparse Matrices}{27}{subsection.3.5.4}
-\contentsline {section}{\numberline {3.6}Stochastic SVD (SSVD)}{27}{section.3.6}
-\contentsline {section}{\numberline {3.7}Computational Complexity}{27}{section.3.7}
-\contentsline {section}{\numberline {3.8}Probabilistic PCA (PPCA)}{28}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}What is PPCA}{28}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}The Probability Model}{29}{subsection.3.8.2}
-\contentsline {subsection}{\numberline {3.8.3}Properties of the Maximum-Likelihood Estimators}{29}{subsection.3.8.3}
-\contentsline {subsection}{\numberline {3.8.4}An EM Algorithm for Probabilistic PCA}{30}{subsection.3.8.4}
-\contentsline {section}{\numberline {3.9}Recent Implementation of \textit {sPCA}}{31}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Special Features}{31}{subsection.3.9.1}
-\contentsline {subsubsection}{Mean Propagation to Leverage Sparsity}{32}{section*.11}
-\contentsline {subsubsection}{Minimizing Intermediate Data}{32}{section*.12}
-\contentsline {subsubsection}{Efficient Matrix Multiplication}{32}{section*.13}
-\contentsline {subsubsection}{Efficient Frobenius Norm Computation}{32}{section*.14}
-\contentsline {subsection}{\numberline {3.9.2}Limitations}{33}{subsection.3.9.2}
-\contentsline {chapter}{\numberline {4}Our Focus}{34}{chapter.4}
-\contentsline {section}{\numberline {4.1}Tall and Wide Data}{35}{section.4.1}
-\contentsline {section}{\numberline {4.2}The Blessings and Curses of Geo Distributed Data}{35}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}The Bright Sides}{35}{subsection.4.2.1}
-\contentsline {subsubsection}{Assurance of Faster Data Access}{35}{section*.15}
-\contentsline {subsubsection}{Protection of National Privacy}{35}{section*.16}
-\contentsline {subsubsection}{Sparsity of Data Centers}{35}{section*.17}
-\contentsline {subsubsection}{Development in Business Sector}{35}{section*.18}
-\contentsline {subsection}{\numberline {4.2.2}The Dark Sides}{35}{subsection.4.2.2}
-\contentsline {subsubsection}{New Challenges in Data Analysis}{35}{section*.19}
-\contentsline {subsubsection}{Unavailability of Global View }{35}{section*.20}
-\contentsline {subsubsection}{Break Down of Data Consistency}{35}{section*.21}
-\contentsline {section}{\numberline {4.3}Challenges We Targeted and Our Proposed Solution}{35}{section.4.3}
-\contentsline {chapter}{\numberline {5}Preliminary Work on Regression Analysis}{36}{chapter.5}
-\contentsline {section}{\numberline {5.1}Contribution}{36}{section.5.1}
-\contentsline {section}{\numberline {5.2}Problem Specification}{37}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Assumptions on Data}{37}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Distribution of Data}{37}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Approach}{37}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Learning Process}{38}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Algorithm}{39}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Our Implementation}{42}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}How the Distributed Algorithm Works}{42}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Runtime Analysis}{43}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Experimental Findings}{43}{section.5.5}
-\contentsline {section}{\numberline {5.6}Limitations}{46}{section.5.6}
-\contentsline {chapter}{\numberline {6}Our Proposed Approach}{47}{chapter.6}
-\contentsline {section}{\numberline {6.1}Handling Tall and Wide Big Data}{47}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}\textbf {Step 1 - Partition of Principal Subspace $W$}}{47}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}\textbf {Step 2 - Data Partition}}{48}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}\textbf {Step 3 - Expectation Step and Omission of Noise Model}}{48}{subsection.6.1.3}
-\contentsline {subsubsection}{\textbf {Step 4 - Maximization Step}}{49}{section*.27}
-\contentsline {section}{\numberline {6.2}Flow Graph and IO Operations}{49}{section.6.2}
-\contentsline {section}{\numberline {6.3}Accumulation of partial results from geographically distributed clusters}{50}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}\textbf {Step 1: Generating The Initial Graph}}{52}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}\textbf {Step 2: Generating MST}}{52}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}\textbf {Step 3: Sub Tree Generation for Parallel Accumulation}}{52}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}\textbf {Step 4: Redistribution of Final Accumulated Result}}{54}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Communication Groups}{55}{section.6.4}
-\contentsline {chapter}{\numberline {7}Contribution}{58}{chapter.7}
-\contentsline {chapter}{\numberline {8}Properties of our Approach}{59}{chapter.8}
-\contentsline {section}{\numberline {8.1}Computational Complexity}{59}{section.8.1}
-\contentsline {section}{\numberline {8.2}Communication Complexity}{60}{section.8.2}
-\contentsline {chapter}{\numberline {9}Implementation in Spark Cluster System}{62}{chapter.9}
-\contentsline {chapter}{\numberline {10}Experimental Evaluation}{64}{chapter.10}
-\contentsline {section}{\numberline {10.1}Cluster Setup}{64}{section.10.1}
-\contentsline {section}{\numberline {10.2}Data Sets}{64}{section.10.2}
-\contentsline {section}{\numberline {10.3}Performance Metrics}{65}{section.10.3}
-\contentsline {subsection}{\numberline {10.3.1}Partition Count of $W$}{65}{subsection.10.3.1}
-\contentsline {subsection}{\numberline {10.3.2}Running Time}{65}{subsection.10.3.2}
-\contentsline {subsubsection}{Time to Achieve Target Accuracy}{67}{section*.36}
-\contentsline {chapter}{\numberline {11}Conclusion}{68}{chapter.11}
-\contentsline {section}{\numberline {11.1}Concluding remarks}{68}{section.11.1}
-\contentsline {section}{\numberline {11.2}Future Works}{68}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Capability of Computing Accuracy and Error}{69}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Designing Better Stop Condition}{69}{subsection.11.2.2}
-\contentsline {subsection}{\numberline {11.2.3}Designing Optimum Partition Count of Principal Subspace $W$}{69}{subsection.11.2.3}
-\contentsline {subsection}{\numberline {11.2.4}Improved Implementation for Dense Matrix Data}{70}{subsection.11.2.4}
-\contentsline {chapter}{References}{71}{subsection.11.2.4}
-\contentsline {chapter}{\numberline {A}Linear Algebra}{74}{appendix.A}
-\contentsline {section}{\numberline {A.1}The inverse of an orthogonal matrix is its transpose.}{74}{section.A.1}
-\contentsline {section}{\numberline {A.2}For any matrix $\pmb {A}$, $\pmb {A^TA}$ and $\pmb {AA^T}$ are symmetric.}{74}{section.A.2}
-\contentsline {section}{\numberline {A.3}A matrix is symmetric if and only if it is orthogonally diagonalizable.}{75}{section.A.3}
-\contentsline {section}{\numberline {A.4}A symmetric matrix is diagonalized by a matrix of its orthonormal eigenvectors.}{75}{section.A.4}
+\contentsline {section}{\numberline {2.3}Data Analysis Approaches }{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Centralized Approach}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Distributed Approach}{7}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Geo Distributed Data}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Data Sovereignty}{8}{section.2.5}
+\contentsline {section}{\numberline {2.6}Data Cluster and Cluster Computing}{9}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Advantages}{9}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Disadvantages}{9}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Data Parallelism}{10}{section.2.7}
+\contentsline {section}{\numberline {2.8}Model Parallelism}{10}{section.2.8}
+\contentsline {section}{\numberline {2.9}TensorFlow}{10}{section.2.9}
+\contentsline {section}{\numberline {2.10}\textit {Hadoop} Cluster}{11}{section.2.10}
+\contentsline {section}{\numberline {2.11}\textit {Hadoop} MapReduce}{11}{section.2.11}
+\contentsline {section}{\numberline {2.12}Spark Cluster}{12}{section.2.12}
+\contentsline {section}{\numberline {2.13}Dimensionality Reduction}{12}{section.2.13}
+\contentsline {section}{\numberline {2.14}Vector Norms}{12}{section.2.14}
+\contentsline {section}{\numberline {2.15}p-Norm}{13}{section.2.15}
+\contentsline {section}{\numberline {2.16}Frobenius Norm}{13}{section.2.16}
+\contentsline {section}{\numberline {2.17}Normal Distribution}{14}{section.2.17}
+\contentsline {section}{\numberline {2.18}Matrix Diagonalization}{14}{section.2.18}
+\contentsline {section}{\numberline {2.19}Expectation Maximization (EM) Algorithm}{16}{section.2.19}
+\contentsline {section}{\numberline {2.20}Stop Condition}{16}{section.2.20}
+\contentsline {chapter}{\numberline {3}PCA as a Data Analytic Tool}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Assumptions Involved in PCA}{18}{section.3.1}
+\contentsline {section}{\numberline {3.2}PCA and Change of Basis}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Eigenvalue Decomposition (EVD)}{20}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Covariance Matrix}{20}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Diagonalize the Covariance Matrix}{22}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Solving PCA in EVD Approach}{23}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Practical Approach of EVD}{25}{section.3.4}
+\contentsline {section}{\numberline {3.5}Singular Value Decomposition (SVD)}{25}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Performing SVD}{25}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Linking SVD with EVD}{26}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}SVD for Dense Matrices}{28}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}SVD for Sparse Matrices}{29}{subsection.3.5.4}
+\contentsline {section}{\numberline {3.6}Stochastic SVD (SSVD)}{29}{section.3.6}
+\contentsline {section}{\numberline {3.7}Computational Complexity}{29}{section.3.7}
+\contentsline {section}{\numberline {3.8}Probabilistic PCA (PPCA)}{30}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}What is PPCA}{30}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}The Probability Model}{31}{subsection.3.8.2}
+\contentsline {subsection}{\numberline {3.8.3}Properties of the Maximum-Likelihood Estimators}{31}{subsection.3.8.3}
+\contentsline {subsection}{\numberline {3.8.4}An EM Algorithm for Probabilistic PCA}{32}{subsection.3.8.4}
+\contentsline {section}{\numberline {3.9}Recent Implementation of \textit {sPCA}}{33}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Special Features}{33}{subsection.3.9.1}
+\contentsline {subsubsection}{Mean Propagation to Leverage Sparsity}{34}{section*.11}
+\contentsline {subsubsection}{Minimizing Intermediate Data}{34}{section*.12}
+\contentsline {subsubsection}{Efficient Matrix Multiplication}{34}{section*.13}
+\contentsline {subsubsection}{Efficient Frobenius Norm Computation}{34}{section*.14}
+\contentsline {subsection}{\numberline {3.9.2}Limitations}{35}{subsection.3.9.2}
+\contentsline {chapter}{\numberline {4}Our Focus}{36}{chapter.4}
+\contentsline {section}{\numberline {4.1}Tall and Wide Data}{37}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Blessings and Curses of Geo Distributed Data}{37}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}The Bright Sides}{37}{subsection.4.2.1}
+\contentsline {subsubsection}{Assurance of Faster Data Access}{37}{section*.15}
+\contentsline {subsubsection}{Protection of National Privacy}{37}{section*.16}
+\contentsline {subsubsection}{Sparsity of Data Centers}{37}{section*.17}
+\contentsline {subsubsection}{Development in Business Sector}{38}{section*.18}
+\contentsline {subsection}{\numberline {4.2.2}The Dark Sides}{38}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}Preliminary Work on Regression Analysis}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Contribution}{39}{section.5.1}
+\contentsline {section}{\numberline {5.2}Problem Specification}{40}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Assumptions on Data}{40}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Distribution of Data}{40}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Approach}{40}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Learning Process}{41}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Algorithm}{42}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Our Implementation}{45}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}How the Distributed Algorithm Works}{45}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Runtime Analysis}{46}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Experimental Findings}{46}{section.5.5}
+\contentsline {section}{\numberline {5.6}Limitations}{49}{section.5.6}
+\contentsline {chapter}{\numberline {6}Our Proposed Approach}{50}{chapter.6}
+\contentsline {section}{\numberline {6.1}Handling Tall and Wide Big Data}{50}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}\textbf {Step 1 - Partition of Principal Subspace $W$}}{50}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}\textbf {Step 2 - Data Partition}}{51}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}\textbf {Step 3 - Expectation Step and Omission of Noise Model}}{51}{subsection.6.1.3}
+\contentsline {subsubsection}{\textbf {Step 4 - Maximization Step}}{52}{section*.24}
+\contentsline {section}{\numberline {6.2}Flow Graph and IO Operations}{52}{section.6.2}
+\contentsline {section}{\numberline {6.3}Accumulation of partial results from geographically distributed clusters}{53}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}\textbf {Step 1: Generating The Initial Graph}}{55}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}\textbf {Step 2: Generating MST}}{55}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}\textbf {Step 3: Sub Tree Generation for Parallel Accumulation}}{55}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}\textbf {Step 4: Redistribution of Final Accumulated Result}}{57}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Communication Groups}{58}{section.6.4}
+\contentsline {chapter}{\numberline {7}Properties of our Approach}{61}{chapter.7}
+\contentsline {section}{\numberline {7.1}Computational Complexity}{61}{section.7.1}
+\contentsline {section}{\numberline {7.2}Communication Complexity}{62}{section.7.2}
+\contentsline {section}{\numberline {7.3}Stop Condition}{62}{section.7.3}
+\contentsline {chapter}{\numberline {8}Implementation in Spark Cluster System}{65}{chapter.8}
+\contentsline {chapter}{\numberline {9}Experimental Evaluation}{67}{chapter.9}
+\contentsline {section}{\numberline {9.1}Cluster Setup}{67}{section.9.1}
+\contentsline {section}{\numberline {9.2}Data Sets}{67}{section.9.2}
+\contentsline {section}{\numberline {9.3}Performance Metrics}{68}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Partition Count of $W$}{68}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Running Time}{68}{subsection.9.3.2}
+\contentsline {subsubsection}{Time to Achieve Target Accuracy}{70}{section*.33}
+\contentsline {subsubsection}{Memory Usage}{74}{section*.38}
+\contentsline {chapter}{\numberline {10}Conclusion}{75}{chapter.10}
+\contentsline {section}{\numberline {10.1}Concluding remarks}{75}{section.10.1}
+\contentsline {section}{\numberline {10.2}Future Works}{75}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Capability of Computing Accuracy and Error}{76}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Designing Better Stop Condition}{76}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Designing Optimum Partition Count of Principal Subspace $W$}{76}{subsection.10.2.3}
+\contentsline {subsection}{\numberline {10.2.4}Improved Implementation for Dense Matrix Data}{77}{subsection.10.2.4}
+\contentsline {chapter}{References}{78}{subsection.10.2.4}
+\contentsline {chapter}{\numberline {A}Linear Algebra}{81}{appendix.A}
+\contentsline {section}{\numberline {A.1}The inverse of an orthogonal matrix is its transpose.}{81}{section.A.1}
+\contentsline {section}{\numberline {A.2}For any matrix $\pmb {A}$, $\pmb {A^TA}$ and $\pmb {AA^T}$ are symmetric.}{81}{section.A.2}
+\contentsline {section}{\numberline {A.3}A matrix is symmetric if and only if it is orthogonally diagonalizable.}{82}{section.A.3}
+\contentsline {section}{\numberline {A.4}A symmetric matrix is diagonalized by a matrix of its orthonormal eigenvectors.}{82}{section.A.4}

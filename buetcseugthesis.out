@@ -1,111 +1,114 @@
 \BOOKMARK [0][-]{DTLrowi.2.1}{CANDIDATES' DECLARATION}{}% 1
-\BOOKMARK [0][-]{DTLrowi.4.3}{CERTIFICATION}{}% 2
+\BOOKMARK [0][-]{DTLrowi.4.2}{CERTIFICATION}{}% 2
 \BOOKMARK [0][-]{DTLrowi.6.1}{ACKNOWLEDGEMENT}{}% 3
 \BOOKMARK [0][-]{section*.3}{List of Figures}{}% 4
 \BOOKMARK [0][-]{section*.4}{List of Tables}{}% 5
 \BOOKMARK [0][-]{section*.4}{List of Algorithms}{}% 6
 \BOOKMARK [0][-]{chapter*.5}{ABSTRACT}{}% 7
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 8
-\BOOKMARK [1][-]{section.1.1}{Data Analysis Approaches }{chapter.1}% 9
-\BOOKMARK [2][-]{subsection.1.1.1}{Centralized Approach}{section.1.1}% 10
-\BOOKMARK [2][-]{subsection.1.1.2}{Distributed Approach}{section.1.1}% 11
-\BOOKMARK [0][-]{chapter.2}{Basic Terminologies}{}% 12
-\BOOKMARK [1][-]{section.2.1}{Big Data}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.2}{Data Analysis}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.3}{Geo Distributed Data}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.4}{Data Sovereignty}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.5}{Data Cluster and Cluster Computing}{chapter.2}% 17
-\BOOKMARK [2][-]{subsection.2.5.1}{Advantages}{section.2.5}% 18
-\BOOKMARK [2][-]{subsection.2.5.2}{Disadvantages}{section.2.5}% 19
-\BOOKMARK [1][-]{section.2.6}{Data Parallelism}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.7}{Model Parallelism}{chapter.2}% 21
-\BOOKMARK [1][-]{section.2.8}{TensorFlow}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.9}{Hadoop Cluster}{chapter.2}% 23
-\BOOKMARK [1][-]{section.2.10}{Hadoop MapReduce}{chapter.2}% 24
-\BOOKMARK [1][-]{section.2.11}{Spark Cluster}{chapter.2}% 25
-\BOOKMARK [1][-]{section.2.12}{Dimensionality Reduction}{chapter.2}% 26
-\BOOKMARK [1][-]{section.2.13}{Vector Norms}{chapter.2}% 27
-\BOOKMARK [1][-]{section.2.14}{p-Norm}{chapter.2}% 28
-\BOOKMARK [1][-]{section.2.15}{Frobenius Norm}{chapter.2}% 29
-\BOOKMARK [1][-]{section.2.16}{Normal Distribution}{chapter.2}% 30
-\BOOKMARK [1][-]{section.2.17}{Matrix Diagonalization}{chapter.2}% 31
-\BOOKMARK [1][-]{section.2.18}{Expectation Maximization \(EM\) Algorithm}{chapter.2}% 32
-\BOOKMARK [1][-]{section.2.19}{Stop Condition}{chapter.2}% 33
-\BOOKMARK [0][-]{chapter.3}{PCA as a Data Analytic Tool}{}% 34
-\BOOKMARK [1][-]{section.3.1}{Assumptions Involved in PCA}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.2}{PCA and Change of Basis}{chapter.3}% 36
-\BOOKMARK [1][-]{section.3.3}{Eigenvalue Decomposition \(EVD\)}{chapter.3}% 37
-\BOOKMARK [2][-]{subsection.3.3.1}{Covariance Matrix}{section.3.3}% 38
-\BOOKMARK [2][-]{subsection.3.3.2}{Diagonalize the Covariance Matrix}{section.3.3}% 39
-\BOOKMARK [2][-]{subsection.3.3.3}{Solving PCA in EVD Approach}{section.3.3}% 40
-\BOOKMARK [1][-]{section.3.4}{Practical Approach of EVD}{chapter.3}% 41
-\BOOKMARK [1][-]{section.3.5}{Singular Value Decomposition \(SVD\)}{chapter.3}% 42
-\BOOKMARK [2][-]{subsection.3.5.1}{Performing SVD}{section.3.5}% 43
-\BOOKMARK [2][-]{subsection.3.5.2}{Linking SVD with EVD}{section.3.5}% 44
-\BOOKMARK [2][-]{subsection.3.5.3}{SVD for Dense Matrices}{section.3.5}% 45
-\BOOKMARK [2][-]{subsection.3.5.4}{SVD for Sparse Matrices}{section.3.5}% 46
-\BOOKMARK [1][-]{section.3.6}{Stochastic SVD \(SSVD\)}{chapter.3}% 47
-\BOOKMARK [1][-]{section.3.7}{Computational Complexity}{chapter.3}% 48
-\BOOKMARK [1][-]{section.3.8}{Probabilistic PCA \(PPCA\)}{chapter.3}% 49
-\BOOKMARK [2][-]{subsection.3.8.1}{What is PPCA}{section.3.8}% 50
-\BOOKMARK [2][-]{subsection.3.8.2}{The Probability Model}{section.3.8}% 51
-\BOOKMARK [2][-]{subsection.3.8.3}{Properties of the Maximum-Likelihood Estimators}{section.3.8}% 52
-\BOOKMARK [2][-]{subsection.3.8.4}{An EM Algorithm for Probabilistic PCA}{section.3.8}% 53
-\BOOKMARK [1][-]{section.3.9}{Recent Implementation of sPCA}{chapter.3}% 54
-\BOOKMARK [2][-]{subsection.3.9.1}{Special Features}{section.3.9}% 55
-\BOOKMARK [2][-]{subsection.3.9.2}{Limitations}{section.3.9}% 56
-\BOOKMARK [0][-]{chapter.4}{Our Focus}{}% 57
-\BOOKMARK [1][-]{section.4.1}{Tall and Wide Data}{chapter.4}% 58
-\BOOKMARK [1][-]{section.4.2}{The Blessings and Curses of Geo Distributed Data}{chapter.4}% 59
-\BOOKMARK [2][-]{subsection.4.2.1}{The Bright Sides}{section.4.2}% 60
-\BOOKMARK [2][-]{subsection.4.2.2}{The Dark Sides}{section.4.2}% 61
-\BOOKMARK [1][-]{section.4.3}{Challenges We Targeted and Our Proposed Solution}{chapter.4}% 62
-\BOOKMARK [0][-]{chapter.5}{Preliminary Work on Regression Analysis}{}% 63
-\BOOKMARK [1][-]{section.5.1}{Contribution}{chapter.5}% 64
-\BOOKMARK [1][-]{section.5.2}{Problem Specification}{chapter.5}% 65
-\BOOKMARK [2][-]{subsection.5.2.1}{Assumptions on Data}{section.5.2}% 66
-\BOOKMARK [2][-]{subsection.5.2.2}{Distribution of Data}{section.5.2}% 67
-\BOOKMARK [1][-]{section.5.3}{Approach}{chapter.5}% 68
-\BOOKMARK [2][-]{subsection.5.3.1}{Learning Process}{section.5.3}% 69
-\BOOKMARK [2][-]{subsection.5.3.2}{Algorithm}{section.5.3}% 70
-\BOOKMARK [1][-]{section.5.4}{Our Implementation}{chapter.5}% 71
-\BOOKMARK [2][-]{subsection.5.4.1}{How the Distributed Algorithm Works}{section.5.4}% 72
-\BOOKMARK [2][-]{subsection.5.4.2}{Runtime Analysis}{section.5.4}% 73
-\BOOKMARK [1][-]{section.5.5}{Experimental Findings}{chapter.5}% 74
-\BOOKMARK [1][-]{section.5.6}{Limitations}{chapter.5}% 75
-\BOOKMARK [0][-]{chapter.6}{Our Proposed Approach}{}% 76
-\BOOKMARK [1][-]{section.6.1}{Handling Tall and Wide Big Data}{chapter.6}% 77
-\BOOKMARK [2][-]{subsection.6.1.1}{Step 1 - Partition of Principal Subspace W}{section.6.1}% 78
-\BOOKMARK [2][-]{subsection.6.1.2}{Step 2 - Data Partition}{section.6.1}% 79
-\BOOKMARK [2][-]{subsection.6.1.3}{Step 3 - Expectation Step and Omission of Noise Model}{section.6.1}% 80
-\BOOKMARK [1][-]{section.6.2}{Flow Graph and IO Operations}{chapter.6}% 81
-\BOOKMARK [1][-]{section.6.3}{Accumulation of partial results from geographically distributed clusters}{chapter.6}% 82
-\BOOKMARK [2][-]{subsection.6.3.1}{Step 1: Generating The Initial Graph}{section.6.3}% 83
-\BOOKMARK [2][-]{subsection.6.3.2}{Step 2: Generating MST}{section.6.3}% 84
-\BOOKMARK [2][-]{subsection.6.3.3}{Step 3: Sub Tree Generation for Parallel Accumulation}{section.6.3}% 85
-\BOOKMARK [2][-]{subsection.6.3.4}{Step 4: Redistribution of Final Accumulated Result}{section.6.3}% 86
-\BOOKMARK [1][-]{section.6.4}{Communication Groups}{chapter.6}% 87
-\BOOKMARK [0][-]{chapter.7}{Contribution}{}% 88
-\BOOKMARK [0][-]{chapter.8}{Properties of our Approach}{}% 89
-\BOOKMARK [1][-]{section.8.1}{Computational Complexity}{chapter.8}% 90
-\BOOKMARK [1][-]{section.8.2}{Communication Complexity}{chapter.8}% 91
-\BOOKMARK [0][-]{chapter.9}{Implementation in Spark Cluster System}{}% 92
-\BOOKMARK [0][-]{chapter.10}{Experimental Evaluation}{}% 93
-\BOOKMARK [1][-]{section.10.1}{Cluster Setup}{chapter.10}% 94
-\BOOKMARK [1][-]{section.10.2}{Data Sets}{chapter.10}% 95
-\BOOKMARK [1][-]{section.10.3}{Performance Metrics}{chapter.10}% 96
-\BOOKMARK [2][-]{subsection.10.3.1}{Partition Count of W}{section.10.3}% 97
-\BOOKMARK [2][-]{subsection.10.3.2}{Running Time}{section.10.3}% 98
-\BOOKMARK [0][-]{chapter.11}{Conclusion}{}% 99
-\BOOKMARK [1][-]{section.11.1}{Concluding remarks}{chapter.11}% 100
-\BOOKMARK [1][-]{section.11.2}{Future Works}{chapter.11}% 101
-\BOOKMARK [2][-]{subsection.11.2.1}{Capability of Computing Accuracy and Error}{section.11.2}% 102
-\BOOKMARK [2][-]{subsection.11.2.2}{Designing Better Stop Condition}{section.11.2}% 103
-\BOOKMARK [2][-]{subsection.11.2.3}{Designing Optimum Partition Count of Principal Subspace W}{section.11.2}% 104
-\BOOKMARK [2][-]{subsection.11.2.4}{Improved Implementation for Dense Matrix Data}{section.11.2}% 105
-\BOOKMARK [0][-]{subsection.11.2.4}{References}{}% 106
-\BOOKMARK [0][-]{appendix.A}{Linear Algebra}{}% 107
-\BOOKMARK [1][-]{section.A.1}{The inverse of an orthogonal matrix is its transpose.}{appendix.A}% 108
-\BOOKMARK [1][-]{section.A.2}{For any matrix A-.4, ATA-.4 and AAT-.4 are symmetric.}{appendix.A}% 109
-\BOOKMARK [1][-]{section.A.3}{A matrix is symmetric if and only if it is orthogonally diagonalizable.}{appendix.A}% 110
-\BOOKMARK [1][-]{section.A.4}{A symmetric matrix is diagonalized by a matrix of its orthonormal eigenvectors.}{appendix.A}% 111
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.2}{Probabilistic PCA \(PPCA\) on Big Data}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.3}{Contribution}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.4}{Organization of this Book}{chapter.1}% 12
+\BOOKMARK [0][-]{chapter.2}{Basic Terminologies}{}% 13
+\BOOKMARK [1][-]{section.2.1}{Big Data}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.2}{Data Analysis}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.3}{Data Analysis Approaches }{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.3.1}{Centralized Approach}{section.2.3}% 17
+\BOOKMARK [2][-]{subsection.2.3.2}{Distributed Approach}{section.2.3}% 18
+\BOOKMARK [1][-]{section.2.4}{Geo Distributed Data}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.5}{Data Sovereignty}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.6}{Data Cluster and Cluster Computing}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.6.1}{Advantages}{section.2.6}% 22
+\BOOKMARK [2][-]{subsection.2.6.2}{Disadvantages}{section.2.6}% 23
+\BOOKMARK [1][-]{section.2.7}{Data Parallelism}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.8}{Model Parallelism}{chapter.2}% 25
+\BOOKMARK [1][-]{section.2.9}{TensorFlow}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.10}{Hadoop Cluster}{chapter.2}% 27
+\BOOKMARK [1][-]{section.2.11}{Hadoop MapReduce}{chapter.2}% 28
+\BOOKMARK [1][-]{section.2.12}{Spark Cluster}{chapter.2}% 29
+\BOOKMARK [1][-]{section.2.13}{Dimensionality Reduction}{chapter.2}% 30
+\BOOKMARK [1][-]{section.2.14}{Vector Norms}{chapter.2}% 31
+\BOOKMARK [1][-]{section.2.15}{p-Norm}{chapter.2}% 32
+\BOOKMARK [1][-]{section.2.16}{Frobenius Norm}{chapter.2}% 33
+\BOOKMARK [1][-]{section.2.17}{Normal Distribution}{chapter.2}% 34
+\BOOKMARK [1][-]{section.2.18}{Matrix Diagonalization}{chapter.2}% 35
+\BOOKMARK [1][-]{section.2.19}{Expectation Maximization \(EM\) Algorithm}{chapter.2}% 36
+\BOOKMARK [1][-]{section.2.20}{Stop Condition}{chapter.2}% 37
+\BOOKMARK [0][-]{chapter.3}{PCA as a Data Analytic Tool}{}% 38
+\BOOKMARK [1][-]{section.3.1}{Assumptions Involved in PCA}{chapter.3}% 39
+\BOOKMARK [1][-]{section.3.2}{PCA and Change of Basis}{chapter.3}% 40
+\BOOKMARK [1][-]{section.3.3}{Eigenvalue Decomposition \(EVD\)}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.3.1}{Covariance Matrix}{section.3.3}% 42
+\BOOKMARK [2][-]{subsection.3.3.2}{Diagonalize the Covariance Matrix}{section.3.3}% 43
+\BOOKMARK [2][-]{subsection.3.3.3}{Solving PCA in EVD Approach}{section.3.3}% 44
+\BOOKMARK [1][-]{section.3.4}{Practical Approach of EVD}{chapter.3}% 45
+\BOOKMARK [1][-]{section.3.5}{Singular Value Decomposition \(SVD\)}{chapter.3}% 46
+\BOOKMARK [2][-]{subsection.3.5.1}{Performing SVD}{section.3.5}% 47
+\BOOKMARK [2][-]{subsection.3.5.2}{Linking SVD with EVD}{section.3.5}% 48
+\BOOKMARK [2][-]{subsection.3.5.3}{SVD for Dense Matrices}{section.3.5}% 49
+\BOOKMARK [2][-]{subsection.3.5.4}{SVD for Sparse Matrices}{section.3.5}% 50
+\BOOKMARK [1][-]{section.3.6}{Stochastic SVD \(SSVD\)}{chapter.3}% 51
+\BOOKMARK [1][-]{section.3.7}{Computational Complexity}{chapter.3}% 52
+\BOOKMARK [1][-]{section.3.8}{Probabilistic PCA \(PPCA\)}{chapter.3}% 53
+\BOOKMARK [2][-]{subsection.3.8.1}{What is PPCA}{section.3.8}% 54
+\BOOKMARK [2][-]{subsection.3.8.2}{The Probability Model}{section.3.8}% 55
+\BOOKMARK [2][-]{subsection.3.8.3}{Properties of the Maximum-Likelihood Estimators}{section.3.8}% 56
+\BOOKMARK [2][-]{subsection.3.8.4}{An EM Algorithm for Probabilistic PCA}{section.3.8}% 57
+\BOOKMARK [1][-]{section.3.9}{Recent Implementation of sPCA}{chapter.3}% 58
+\BOOKMARK [2][-]{subsection.3.9.1}{Special Features}{section.3.9}% 59
+\BOOKMARK [2][-]{subsection.3.9.2}{Limitations}{section.3.9}% 60
+\BOOKMARK [0][-]{chapter.4}{Our Focus}{}% 61
+\BOOKMARK [1][-]{section.4.1}{Tall and Wide Data}{chapter.4}% 62
+\BOOKMARK [1][-]{section.4.2}{The Blessings and Curses of Geo Distributed Data}{chapter.4}% 63
+\BOOKMARK [2][-]{subsection.4.2.1}{The Bright Sides}{section.4.2}% 64
+\BOOKMARK [2][-]{subsection.4.2.2}{The Dark Sides}{section.4.2}% 65
+\BOOKMARK [0][-]{chapter.5}{Preliminary Work on Regression Analysis}{}% 66
+\BOOKMARK [1][-]{section.5.1}{Contribution}{chapter.5}% 67
+\BOOKMARK [1][-]{section.5.2}{Problem Specification}{chapter.5}% 68
+\BOOKMARK [2][-]{subsection.5.2.1}{Assumptions on Data}{section.5.2}% 69
+\BOOKMARK [2][-]{subsection.5.2.2}{Distribution of Data}{section.5.2}% 70
+\BOOKMARK [1][-]{section.5.3}{Approach}{chapter.5}% 71
+\BOOKMARK [2][-]{subsection.5.3.1}{Learning Process}{section.5.3}% 72
+\BOOKMARK [2][-]{subsection.5.3.2}{Algorithm}{section.5.3}% 73
+\BOOKMARK [1][-]{section.5.4}{Our Implementation}{chapter.5}% 74
+\BOOKMARK [2][-]{subsection.5.4.1}{How the Distributed Algorithm Works}{section.5.4}% 75
+\BOOKMARK [2][-]{subsection.5.4.2}{Runtime Analysis}{section.5.4}% 76
+\BOOKMARK [1][-]{section.5.5}{Experimental Findings}{chapter.5}% 77
+\BOOKMARK [1][-]{section.5.6}{Limitations}{chapter.5}% 78
+\BOOKMARK [0][-]{chapter.6}{Our Proposed Approach}{}% 79
+\BOOKMARK [1][-]{section.6.1}{Handling Tall and Wide Big Data}{chapter.6}% 80
+\BOOKMARK [2][-]{subsection.6.1.1}{Step 1 - Partition of Principal Subspace W}{section.6.1}% 81
+\BOOKMARK [2][-]{subsection.6.1.2}{Step 2 - Data Partition}{section.6.1}% 82
+\BOOKMARK [2][-]{subsection.6.1.3}{Step 3 - Expectation Step and Omission of Noise Model}{section.6.1}% 83
+\BOOKMARK [1][-]{section.6.2}{Flow Graph and IO Operations}{chapter.6}% 84
+\BOOKMARK [1][-]{section.6.3}{Accumulation of partial results from geographically distributed clusters}{chapter.6}% 85
+\BOOKMARK [2][-]{subsection.6.3.1}{Step 1: Generating The Initial Graph}{section.6.3}% 86
+\BOOKMARK [2][-]{subsection.6.3.2}{Step 2: Generating MST}{section.6.3}% 87
+\BOOKMARK [2][-]{subsection.6.3.3}{Step 3: Sub Tree Generation for Parallel Accumulation}{section.6.3}% 88
+\BOOKMARK [2][-]{subsection.6.3.4}{Step 4: Redistribution of Final Accumulated Result}{section.6.3}% 89
+\BOOKMARK [1][-]{section.6.4}{Communication Groups}{chapter.6}% 90
+\BOOKMARK [0][-]{chapter.7}{Properties of our Approach}{}% 91
+\BOOKMARK [1][-]{section.7.1}{Computational Complexity}{chapter.7}% 92
+\BOOKMARK [1][-]{section.7.2}{Communication Complexity}{chapter.7}% 93
+\BOOKMARK [1][-]{section.7.3}{Stop Condition}{chapter.7}% 94
+\BOOKMARK [0][-]{chapter.8}{Implementation in Spark Cluster System}{}% 95
+\BOOKMARK [0][-]{chapter.9}{Experimental Evaluation}{}% 96
+\BOOKMARK [1][-]{section.9.1}{Cluster Setup}{chapter.9}% 97
+\BOOKMARK [1][-]{section.9.2}{Data Sets}{chapter.9}% 98
+\BOOKMARK [1][-]{section.9.3}{Performance Metrics}{chapter.9}% 99
+\BOOKMARK [2][-]{subsection.9.3.1}{Partition Count of W}{section.9.3}% 100
+\BOOKMARK [2][-]{subsection.9.3.2}{Running Time}{section.9.3}% 101
+\BOOKMARK [0][-]{chapter.10}{Conclusion}{}% 102
+\BOOKMARK [1][-]{section.10.1}{Concluding remarks}{chapter.10}% 103
+\BOOKMARK [1][-]{section.10.2}{Future Works}{chapter.10}% 104
+\BOOKMARK [2][-]{subsection.10.2.1}{Capability of Computing Accuracy and Error}{section.10.2}% 105
+\BOOKMARK [2][-]{subsection.10.2.2}{Designing Better Stop Condition}{section.10.2}% 106
+\BOOKMARK [2][-]{subsection.10.2.3}{Designing Optimum Partition Count of Principal Subspace W}{section.10.2}% 107
+\BOOKMARK [2][-]{subsection.10.2.4}{Improved Implementation for Dense Matrix Data}{section.10.2}% 108
+\BOOKMARK [0][-]{subsection.10.2.4}{References}{}% 109
+\BOOKMARK [0][-]{appendix.A}{Linear Algebra}{}% 110
+\BOOKMARK [1][-]{section.A.1}{The inverse of an orthogonal matrix is its transpose.}{appendix.A}% 111
+\BOOKMARK [1][-]{section.A.2}{For any matrix A-.4, ATA-.4 and AAT-.4 are symmetric.}{appendix.A}% 112
+\BOOKMARK [1][-]{section.A.3}{A matrix is symmetric if and only if it is orthogonally diagonalizable.}{appendix.A}% 113
+\BOOKMARK [1][-]{section.A.4}{A symmetric matrix is diagonalized by a matrix of its orthonormal eigenvectors.}{appendix.A}% 114

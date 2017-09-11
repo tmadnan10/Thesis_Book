@@ -1,4 +1,5 @@
 \chapter{Preliminary Work on Regression Analysis}
+	\label{c:5}
 The field of geo-distributed data analysis is quite vast. A detailed study of these aspects of the distributed approach of data analysis is beyond the scope of our tasks during the first few days. As a part of learning how to work on data analytic what we wanted to introduce is a problem specific approach. We were interested in doing ``Regression Analysis" on data located at different geographical areas all around the world. Primarily we have worked out with only two variants of regression analysis ``Linear Regression" and ``Polynomial Regression". So we can say the other variants as well as other problem oriented approaches were not be covered in this chapter. 
 
 \section{Contribution}

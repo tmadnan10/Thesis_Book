@@ -1,4 +1,5 @@
 \chapter{PCA as a Data Analytic Tool}
+	\label{c:3}
 Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components \cite{13}. The number of principal components is less than or equal to the smaller of the number of original variables or the number of observations. This transformation is defined in such a way that the first principal component has the largest possible variance and each succeeding component in turn has the highest variance possible under the constraint that it is orthogonal to the preceding components. As we can use PCA for dimensionality reduction, it can be used as a preprocessing step  in many machine learning algorithms that do not perform well with high-dimensional data. Therefore we can easily realize that PCA is an excellent tool for big data analysis. 
 
 There are several ways to perform PCA. Eigen Value Decomposition (EVD) of covariance matrix and Singular Value Decomposition (SVD) are two basic and most common ways \cite{14}. These methods usually perform better on small datasets on a single machine. But in distributed settings and for big data, they introduce a new set of difficulties; they do not scale well to high dimensional data and are inefficient in terms of computation and communication cost \cite{elgamal}. To overcome these difficulties, two other methods, Stochastic SVD (SSVD) \cite{16} and Probabilistic PCA (PPCA) \cite{17} are used in practice. But unlike the other methods to calculate principal component (i.e. EVD of covariance matrix, SVD, SSVD), PPCA has two important advantages. It has the ability of handling missing data and calculating probabilistic model to generate synthesized data \cite{18}. These features are best suited for big data as missing values are prevalent in this case and a probabilistic model of the data will be more effective for analytical purposes.
@@ -387,7 +388,7 @@ Computational complexity of SSVD is dominated by the first step, which is $\math
 \section{Probabilistic PCA (PPCA)}
 We will be trying to present \textit{PPCA} in some kind of detail. For this we will follow the research work of Tipping and Bishop \cite{bishop}
 \subsection{What is PPCA}
-We can obtain a probabilistic formulation of PCA by introducing a Gaussian latent i.e. unobserved variable mode. This kind of model is highly related to statistical factor analysis. First let us define some quantity:
+We can obtain a probabilistic formulation of PCA by introducing a Gaussian latent i.e. unobserved variable model. This kind of model is highly related to statistical factor analysis. First let us define some quantity:
 \begin{itemize}
 \item $\pmb{y}$ is a $D$ dimensional observed data vector
 \item $\pmb{x}$ is a $d$ dimensional latent variable
@@ -491,20 +492,21 @@ The basic algorithm of PPCA is given below:
 \begin{algorithm}[!htbp]
 \caption{Basic PPCA}
 \begin{algorithmic}[1]
-\STATE $W = normrnd(D,d)$
-\STATE $ss=normrnd(1,1)$
-\STATE $Y_m=columnMean(Y)$
-\STATE  $Y_c=Y-Ym$
-\WHILE {$(!Stop\_Condition)$}
-	\STATE $M = W^T * W + ss * I$
-	\STATE $X = Y_c * W * M^{-1}$
-	\STATE $XtX = X^T * X + ss * M^{-1}$
-	\STATE $YtX = Y_c^T * X$
-	\STATE $W = YtX \times$ \textit{invert($XtX$)}
-	\STATE $ss2 = trace(XtX * W^T * W)$
-	\STATE $ss3= \sum_{n=1}^N X_n * W^T * {Y_c}_n$
-	\STATE $ss = (||Y c||^2_F + ss2-2 * ss3)\times N^{-1} \times D^{-1}$
-\ENDWHILE
+	\STATE $W = normrnd(D,d)$
+	\STATE $ss=normrnd(1,1)$
+	\STATE $Y_m=columnMean(Y)$
+	\STATE  $Y_c=Y-Ym$
+	\WHILE {$(!Stop\_Condition)$}
+		\STATE $M = W^T * W + ss * I$
+		\STATE $X = Y_c * W * M^{-1}$
+		\STATE $XtX = X^T * X + ss * M^{-1}$
+		\S	TATE $YtX = Y_c^T * X$
+		\STATE $W = YtX \times$ \textit{invert($XtX$)}
+		\STATE $ss2 = trace(XtX * W^T * W)$
+		\STATE $ss3= \sum_{n=1}^N X_n * W^T * {Y_c}_n$
+		\STATE $ss = (||Y c||^2_F + ss2-2 * ss3)\times N^{-1} \times D^{-1}$
+	\ENDWHILE
+\label{basic}
 \end{algorithmic}
 \end{algorithm}
 
@@ -514,7 +516,7 @@ The basic algorithm of PPCA is given below:
 \subsection{Special Features}
 The implementation of \textit{sPCA} has a good number of features:
 \subsubsection{Mean Propagation to Leverage Sparsity}
-The first optimization we propose is the mean propagation idea, which preserves and utilizes the sparsity of the input matrix $\pmb{Y}$. PPCA requires the input matrix to be mean-centered, meaning that the mean vector $\pmb{\mu}$ must be subtracted from each row of the original matrix $\pmb{Y}$. Large matrices, however, are mostly sparse, with many zero elements. Sparse matrices can achieve a small disk and memory footprint by storing only non-zero elements, and performing operations only over non-zero elements. Subtracting the non-zero mean from the matrix would make many elements non-zero, so the advantage of sparsity is lost.
+The first optimization they propose is the mean propagation idea, which preserves and utilizes the sparsity of the input matrix $\pmb{Y}$. PPCA requires the input matrix to be mean-centered, meaning that the mean vector $\pmb{\mu}$ must be subtracted from each row of the original matrix $\pmb{Y}$. Large matrices, however, are mostly sparse, with many zero elements. Sparse matrices can achieve a small disk and memory footprint by storing only non-zero elements, and performing operations only over non-zero elements. Subtracting the non-zero mean from the matrix would make many elements non-zero, so the advantage of sparsity is lost.
 
 To avoid the problems of subtracting the mean, they keep the original matrix $\pmb{Y}$ and the mean $\pmb{\mu}$ in two separate data structures. they did not subtract the mean $\pmb{\mu}$ from $\pmb{Y}$. Rather, they propagate the mean throughout the different matrix operations.
 \subsubsection{Minimizing Intermediate Data}

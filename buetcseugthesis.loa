@@ -1,9 +1,10 @@
-\contentsline {algorithm}{\numberline {1}{\ignorespaces Basic PPCA\relax }}{31}{algorithm.1}
-\contentsline {algorithm}{\numberline {2}{\ignorespaces Geo-Distributed Regression Analysis\relax }}{40}{algorithm.2}
-\contentsline {algorithm}{\numberline {3}{\ignorespaces Geo-Distributed Regression Analysis\relax }}{40}{algorithm.3}
-\contentsline {algorithm}{\numberline {4}{\ignorespaces PPCA on Tall and Wide Big Data\relax }}{51}{algorithm.4}
-\contentsline {algorithm}{\numberline {5}{\ignorespaces createSubTree\relax }}{55}{algorithm.5}
-\contentsline {algorithm}{\numberline {6}{\ignorespaces startAccumulation\relax }}{56}{algorithm.6}
-\contentsline {algorithm}{\numberline {7}{\ignorespaces createMyInfo\relax }}{56}{algorithm.7}
-\contentsline {algorithm}{\numberline {8}{\ignorespaces SegmentedXJob($X,Y,X_m,W,start,end$)\relax }}{62}{algorithm.8}
-\contentsline {algorithm}{\numberline {9}{\ignorespaces SegmentedXJob($YtX,XtX,X,Y,Y_m,i,s,e$)\relax }}{63}{algorithm.9}
+\contentsline {algorithm}{\numberline {1}{\ignorespaces Basic PPCA\relax }}{33}{algorithm.1}
+\contentsline {algorithm}{\numberline {2}{\ignorespaces Geo-Distributed Regression Analysis\relax }}{43}{algorithm.2}
+\contentsline {algorithm}{\numberline {3}{\ignorespaces Geo-Distributed Regression Analysis\relax }}{43}{algorithm.3}
+\contentsline {algorithm}{\numberline {4}{\ignorespaces PPCA on Tall and Wide Big Data\relax }}{54}{algorithm.4}
+\contentsline {algorithm}{\numberline {5}{\ignorespaces createSubTree\relax }}{58}{algorithm.5}
+\contentsline {algorithm}{\numberline {6}{\ignorespaces startAccumulation\relax }}{59}{algorithm.6}
+\contentsline {algorithm}{\numberline {7}{\ignorespaces createMyInfo\relax }}{59}{algorithm.7}
+\contentsline {algorithm}{\numberline {8}{\ignorespaces checkStopCondition\relax }}{64}{algorithm.8}
+\contentsline {algorithm}{\numberline {9}{\ignorespaces SegmentedXJob($X,Y,X_m,W,start,end$)\relax }}{65}{algorithm.9}
+\contentsline {algorithm}{\numberline {10}{\ignorespaces SegmentedXJob($YtX,XtX,X,Y,Y_m,i,s,e$)\relax }}{66}{algorithm.10}

@@ -33,7 +33,7 @@
 %Chapter-2 Basic Terminologies
 
 \chapter{Basic Terminologies}
-
+	\label{c:2}
 \section{Big Data}
 Big Data is a term for voluminous amounts of data that has the potential to be mined for information. Big data can be analyzed for insights that lead to better decisions. Big Data is characterized by three main factors: the extremely large volume of data, the wide variety of data types and the velocity at which the data must be processed. 
 
@@ -47,6 +47,68 @@ Principal Component Analysis(PCA), which is the main focus of our thesis, is con
 According to \cite{dataanalysis} Data analysis, also known as analysis of data or data analytics, is a process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information, suggesting conclusions, and supporting decision-making. Data analysis has multiple facets and approaches, encompassing diverse techniques under a variety of names, in different business, science, and social science domains.
 
 Data mining is a particular data analysis technique that focuses on modeling and knowledge discovery for predictive rather than purely descriptive purposes, while business intelligence covers data analysis that relies heavily on aggregation, focusing on business information \cite{01}. In statistical applications data analysis can be divided into descriptive statistics, exploratory data analysis (EDA), and confirmatory data analysis (CDA). EDA focuses on discovering new features in the data and CDA on confirming or falsifying existing hypotheses. Predictive analytics focuses on application of statistical models for predictive forecasting or classification, while text analytics applies statistical, linguistic, and structural techniques to extract and classify information from textual sources, a species of unstructured data. All are varieties of data analysis.
+
+
+\section{Data Analysis Approaches }
+Under these circumstances, we can see that in case of extracting some information from the existing data, we may have to cover a good number of data centres located at different geographical area. This has given the introduction of a new data analysis approach, ``Distributed Data Analysis''. Therefore we get the idea of two approaches of data analysis.
+
+\subsection{Centralized Approach}
+The centralized approach to data analysis from distributed data centers is to centralize them first. As shown in Figure \ref{centralized}, this involves a two different steps: 
+
+
+\begin{enumerate}
+
+\item \textbf{Centralizing step} Data from various data centers are copied into a single data center. It involves recreation of data of all data centers in one location.
+
+\item \textbf{Analysis Step} Process of extracting the necessary information from the centralized data takes place in that single data center. Here traditional intra data center technology is sufficient for the analysis purpose.
+
+\end{enumerate}
+
+\begin{figure}[!htbp]
+  \centering
+	\includegraphics[width=3.2in]{figures/1.png}
+	\caption{Centralized Approach}
+	\label{centralized}
+\end{figure}
+
+
+This centralized approach is predominant in most practical settings. 
+There are mainly two reasons behind its popularity. 
+\begin{enumerate}
+\item There are lots of frameworks that have already been established for centralized learning approach. That is why centralizing the data is the easiest way to reuse existing data analysis frameworks \cite{1,2,3}
+\item Learning algorithms are highly communication intensive. Thus it is assumed that they will note be properly responsive to cross data center execution.
+\end{enumerate}
+For these reasons, this centralized approach is consistent with reports on the infrastructures of other large organizations, such as Facebook \cite{4}, Twitter \cite{5}, and LinkedIn \cite{6}. 
+
+However the centralized approach has two shortcomings.
+\begin{enumerate}
+\item While making multiple copy of data at the central data center, it consumes a good amounts of inter data center bandwidth. Since inter data center bandwidth is expensive, it is not easy to increase it according to the necessity \cite{7,8,9,10}.
+\item While creating copy of data, it may be a case that data is crossing national borders. However, in current workd data sovereignty is a growing concern that might create a big limitation in this aspect \cite{11,12}.
+
+\end{enumerate}
+
+\subsection{Distributed Approach}
+In the distributed approach, raw data is kept in their corresponding data centers. Every data center does a portion of the execution that is only on the data of that data center. The final analysis takes pales by passing small amount of information among the data centers. 
+
+\begin{figure}[!htbp]
+  \centering
+	\includegraphics[width=3.2in]{figures/2.png}
+	\caption{Distributed Approach}
+\label{distributed}
+\end{figure}
+
+So according to Figure \ref{distributed}, we can see this approach includes three steps:
+
+\begin{enumerate}
+\item \textbf{Local Computation} Whenever the command of starting of any learning process is issued every data center start a partial computation on its own data. They create necessary high level information on data that will be needed in the final computation.
+
+\item \textbf{Parameter Passing} Data centers communicate among themselves and share valuable information.
+
+\item \textbf{Final Computation} By integrating the partial results data centers make the final computational model.
+\end{enumerate}
+
+In this way distributed solutions can achieve much lower cross data centers bandwidth utilization, and thus substantially lower cost for large-scale analysis tasks. As the current world has got a concern about `Big Data' and `Data Sovereignty', the distributed approach seems to be more efficient. 
+
 
 \section{Geo Distributed Data}
 
@@ -250,6 +312,7 @@ In iterative algorithm like EM, main terminating condition considered is the cha
 %Chapter-4 Our Focus
 
 \chapter{Our Focus}
+	\label{c:4}
 In current world, the rate of generation of data is quite large. We live in an age of Big Data and Internet of Things (loT). The term Big Data is not really an overstatement. Numerous web services share and collect data of huge scale, typically in terabytes range, and the data includes various aspects of users, for example, clicks, visits, likes, shares, comments, reviews, ratings, tweets, photos, videos etc. Apart from these web services, big data is also generated by countless sensors all around the globe to gather valuable information about respective fields. For example, closed circuit cameras recording is a good source of big data. In a nutshell, every electronic device, Internet services, embedded system and sensor the globe produce and transmit data and big data is being generated by these multiple sources at an alarming velocity, volume and variety.
 
 For researchers, however, big data brings new sets of challenges like how to efficiently and
@@ -266,24 +329,30 @@ In this chapter we will discuss the present issues that we are going to take int
 \section{Tall and Wide Data}
 In general, the width of data means the number of features that each data sample is comprised of. In present world, this features count is increasing at large scale. The feature count or width of data sample can also be named as ``Dimension of Data". One of the most effective use of PCA is dimensionality reduction. Many machine learning algorithms are not capable of handling data with large dimension. Therefore, we can use PCA to reduce the width of data then fit them in some kind of machine learning model. This present some kind of new challenge. The present PCA algorithms are not that much capable of handle very wide data that is tall also. Therefore before making the data suitable for machine learning models by dimensionality reduction, the PPCA algorithm has to deal with the curse of tall and wide data. The present implementation of \textit{sPCA} done good number of optimization to make efficient use of memory. Still it is not capable of handling tall and wide data. The memory overflow occurs while computing the intermediate results. 
 \section{The Blessings and Curses of Geo Distributed Data}
-
+Geo Distributed Data has both positive and negative sides. In this section we will show some of them.
 \subsection{The Bright Sides}
 \subsubsection{Assurance of Faster Data Access}
+As data stays closer to end users, the users can easily access the data with lower latency.
 \subsubsection{Protection of National Privacy}
+Now data contains some kind national privacy. Moreover no nation will want the data of its people to cross the national boundary. As a result there are regulations on na
 \subsubsection{Sparsity of Data Centers}
+The Data centers are not places on the same regions. Multiple Data centers are placed in different place. 
 \subsubsection{Development in Business Sector}
+As different giant companies establishing there data center in different countries, so the business is growing.
 
 
 \subsection{The Dark Sides}
-\subsubsection{New Challenges in Data Analysis}
-\subsubsection{Unavailability of Global View }
-\subsubsection{Break Down of Data Consistency}
+\begin{itemize}
+	\item New Challenges in Data Analysis
+	\item Unavailability of Global View 
+	\item Break Down of Data Consistency
+\end{itemize}
 
-\section{Challenges We Targeted and Our Proposed Solution}
 
 \input{regression.tex}
 
 \chapter{Our Proposed Approach}
+	\label{c:6}
 As discussed before, we are interested in presenting an approach that will resolve the memory limitation problem and hence give an systematic way to run \emph{PPCA} on geographically distributed data. 
 
 \section{Handling Tall and Wide Big Data}
@@ -563,17 +632,8 @@ The communication group are shown in Figure \ref{communication1}
 
 
 
-\chapter{Contribution}
-Summarizing, our main contributions are:
-\begin{itemize}
-\item We propose an approach of PPCA that deals with geographically distributed Tall and Wide Big Data and provide an in-depth study of the relative merits against recent efficient approach \textit{sPCA}.
-\item We propose a system that builds upon Apache Spark  \cite{spark} environment and extends their functionality to support multiple data clusters learning applications.
-\item We propose an approach that will minimize the number of transfers among data centers thus minimize the inter data center bandwidth utilization.
-\item We propose an approach that will be scalable to the available hardware of the data clusters. It will allow us to handle Tall and Wide big data in commodity computers with memory even of $6/8GB$ also.
-\item We present experimental results implemented on the clusters in our undergraguate thesis laboratory. 
-\end{itemize}
-
 \chapter{Properties of our Approach}
+	\label{c:7}
 In this section, we analyze the computational and communication complexity of our proposed algorithm and derive some theoretical properties.
 
 \section{Computational Complexity}
@@ -586,15 +646,15 @@ Now our Algorithm \ref{tallnwide} has three different parts.
 
 From line 7 to 12 a \textbf{For Loop} is generating initial random $W_i$'s. Here the running time is $\mathcal{O}(pD_id)$
 
-From line 17 to 24 another \textbf{For Loop} is there to compute $X$ of Equation \ref{5} and \ref{6}. Here tasks of line 20-24 will have a time complexity of $\mathcal{O}(D_id+d^2+d+d+N_iD_id)$. That makes the aggregated runtime of this for loop $\mathcal{O}(pN_iD_id)$.
+From line 17 to 24 another \textbf{For Loop} is there to compute $X$ of Equation \ref{5} and \ref{6}. Here tasks of line 20-24 will have a time complexity of $\mathcal{O}(D_id^2+d^2+d+d+N_iD_id)$. That makes the aggregated runtime of this for loop $\mathcal{O}(pN_iD_id)$.
 
 From line 29 to 37 another \textbf{For Loop} is generating $XtX$ and $YtX$, fining at generating new $W_i$. Therefore line 32-35 will have a time complexity of $\mathcal{O}(N_id^2 + D_iN_id+D_id^2+d^4 + D_id^2)$. That makes the aggregated runtime of this for loop $\mathcal{O}(pN_iD_id)$.
 
 Therefore, if \textbf{While Loop} of line 14 runs for $r$ rounds then the total run time is going to be $\mathcal{O}(2rpN_iD_id)$.
 
 \section{Communication Complexity}
-The approach is highly communication intensive. At the end of generating each new segment of principal subspace $W$ each data cluster will call Algorithm \ref{accum} as a background process. This will make a data cluster to accumulate from its child nodes and give a notification to its parent. Each accumulation demands the transmission of a $D_i \times d$ matrix where $D_i$ varies with the number of partition is done on $W$. As partition information i.e. $D_i$ is available at the start of the process the communication tree generation can be done based on the available bandwidth between any two data clusters and the time required to transmit data of that size. For simplicity we assume the availability of dedicate bandwidth between any two data clusters.Under these assumptions, the time needed to make the accumulated result of a subtree available at the root node of that subtree is equal to the maximum aggregated time of any path from root to leaf node. If such paths are $P_1$ and $P_2$ of $subTree1$ and $subTree2$ respectively and maximum time consuming link time is $max\_time$, then the time of communication will be $$max\_time+2*max(time(P_1),time(P_2))$$ 
-The $2$ is added as accumulated data will be redistributed in the same paths. In Figure \ref{fig:comm} the maximum time consumtioon link has a time of $27$ units the gray shaded paths has the maximum time consumption of $46$ and $31$ units. Therefore the communication time of accumulating one segement of $W$ will be $$27+2*max(46,31) = 119\ units$$ 
+The approach is highly communication intensive. At the end of generating each new segment of principal subspace $W$ each data cluster will call Algorithm \ref{accum} as a background process. This will make a data cluster to accumulate from its child nodes and give a notification to its parent. Each accumulation demands the transmission of a $D_i \times d$ matrix where $D_i$ varies with the number of partition is done on $W$. As partition information i.e. $D_i$ is available at the start of the process the communication tree generation can be done based on the available bandwidth between any two data clusters and the time required to transmit data of that size. For simplicity we assume the availability of dedicate bandwidth between any two data clusters.Under these assumptions, the time needed to make the accumulated result of a subtree available at the root node of that subtree is equal to the maximum aggregated time of any path from root to leaf node. If such paths are $P_1$ and $P_2$ of $subTree1$ and $subTree2$ respectively and maximum time consuming link time is $max\_time$, then the time of communication will be $$2*max\_time+2*max(time(P_1),time(P_2))$$ 
+The $2$ is added as accumulated data will be redistributed in the same paths. In Figure \ref{fig:comm} the maximum time consumtioon link has a time of $27$ units the gray shaded paths has the maximum time consumption of $46$ and $31$ units. Therefore the communication time of accumulating one segement of $W$ will be $$2*27+2*max(46,31) = 146\ units$$ 
 
 \begin{figure}
     \centering
@@ -604,8 +664,48 @@ The $2$ is added as accumulated data will be redistributed in the same paths. In
 \end{figure}
 
 
+\section{Stop Condition}
+From Algorithm \ref{tallnwide} we can see that the \textbf{While} loop of line 14 will continue until the stop condition being true. While the algorithm will start we will set a tolerance rate. While the reconstruction error comes within the tolerance rate the algorithm will be considered to reach the convergence and eventually it will stop further iteration. The error checking formula is given by \cite{bishop}:
+$e = ||Y -X * W^{-1}||_1$
+However, since the sampling rate and size of data matrix will be varied, to make the eroor computing dependent of these  two, \textit{sPCA} \cite{elgamal} reported the norm of the reconstruction error divided by the norm of the matrix made up of the randomly selected rows, which is:
+$$e=||Y_r - X_r*W^{-1}||_1/||Y_r||_1$$
+Unfortunately the $W$ here is being generated as a whole but in our case we will be working on a particular segment of $W$. Therefore, We will have in hand a particular segment of $W$ namely $W_i$, a particular segment of $Y$ namely $Y_i$ and $X$ as a whole. This will break the data consistency and our calculated $e$ will be the desired one. Therefore, we were not able to compute original reconstruction error in this approach and examine the stop condition. Rather we used some approach used widely in Matlab. We checked the change in $W$ newly generated with the previous one and found the point of convergence by having a change in $W$ smaller than the tolerance. Initially we had two variables:
+\begin{align*}
+dw &= 0\\
+maxWNew &= 0
+\end{align*}
+At the end of each iteration, These two variables will have their changed value and as soon as $dw$ is less than tolerance the algorithm will be considered to achieve convergence. 
+\begin{align*}
+maxWnew &= max(|{\widetilde{W}}_{pq}|, maxWnew)\ \forall p \in D, q \in d\\
+dw &= max(|{W}_{pq} - {\widetilde{W}}_{pq} |, dw)\\
+dw &= \dfrac{dw}{\sqrt{eps} + maxWnew}
+\end{align*}
+
+\begin{algorithm}
+	\begin{algorithmic}[1]
+	\label{stop}
+	\caption{checkStopCondition}
+	\STATE \textbf{Input:}$start$, $end$, $Wold$, $Wnew$, $stopCondition$, $dw$,  $maxWNew$, $tolerance$
+	\FOR {$p$ = $start$ to $end$}
+		\FOR {$q$ = $0$ to $nPC$}
+		\STATE $maxWnew$ = \textit{max}(\textit{abs}($Wold[p-start][q]$), $maxWnew$)
+		\ENDFOR
+	\ENDFOR
+	\FOR {$p$ = $start$ to $end$}
+		\FOR {$q$ = $0$ to $nPC$}
+		\STATE $maxWnew$ = \textit{max}(\textit{abs}($Wold[p-start][q] - Wnew[p-start][q]$), $dw$)
+		\ENDFOR
+	\ENDFOR
+	\STATE $sqrtEps$ = 2.2204e-16
+	\STATE $dw$ = $dw /$ ($sqrtEps + maxWnew$)
+	\IF {$dw \leq tolerance$}
+		\STATE $stopCondition$ = $True$
+	\ENDIF
+	\end{algorithmic}
+\end{algorithm}
 
 \chapter{Implementation in Spark Cluster System}
+	\label{c:8}
 We implemented our proposed system on Spark \cite{spark} cluster computing system. Spark gives us various types of storage system. Spark provides resilient distributed datasets (RDDs) and parallel operations on these datasets. Resilient Distributed Datasets (RDD) is a fundamental data structure of Spark \cite{spark-site}. It is an immutable distributed collection of objects. Each dataset in RDD is divided into logical partitions, which may be computed on different nodes of the cluster. From user level the persistanc of RDD can be controlled. It can be cached in memory or store on disk to be used later through IO operations. Moreover the user can control its partitioning process like partition by key.
 
 In case of small data that can be kept in memory while computing, we did the in-memory computations by making the input matrix $Y$ persistent in the memory of the machines of our spark cluster. Therefore we could perform faster distributed operations on our data. On the other hand, for clusters with small count of nodes i.e. small amount of memory, we have to make IO operations by keeping the data on disks and load a specific segment of it while needed. 
@@ -665,6 +765,7 @@ The Algorithms \ref{segmented1} and \ref{segmented2} are based on the Spark Prog
 \end{algorithm}
 
 \chapter{Experimental Evaluation}
+	\label{c:9}
 In this chapter we will present our experimental result that we found while implementing our approach in \textit{Spark} Cluster computing system.
 \section{Cluster Setup}
 We built \textit{Spark} clusters in our \textit{Undergraduate Thesis Lab}. To evaluate the performance of the method to handle \textit{Tall and Wide Big Data}, we created clusters that was composed of three machines with one master node and two slave nodes. Each of the machines had $64GB$ of memory and quad core processor of $3.6GHz$. That makes our cluster with $12$ cores of processor to work with. We installed \textit{Apache Spark 2.0} with \textit{\textit{Hadoop} 2.7} for \textit{HDFS}.
@@ -723,7 +824,7 @@ the range of dimension of our data matrix $Y$ corresponding to the subscript $i$
     \hline
     \multicolumn{6}{c}{}
     \end{tabular}
-    \caption{Caption}
+    \caption{Effect of Partition count of $W$ on Amazon Data Set }
     \label{tab:amazon_partition}
 \end{table}
 
@@ -748,7 +849,7 @@ the range of dimension of our data matrix $Y$ corresponding to the subscript $i$
     \hline
     \multicolumn{6}{c}{}
     \end{tabular}
-    \caption{Caption}
+    \caption{Effect of Partition count of $W$ on Twitter Data Set }
     \label{tab:twitter_partition}
 \end{table}
 
@@ -762,20 +863,47 @@ In Figure \ref{comp:N} we varied the sample count of the input data matrix. Howe
 
 \begin{figure}[!htbp]
     \centering
-    %\frame{\includegraphics{}}
-    \caption{Running Time per Iteration Comparison with \textit{sPCA} for $21M$ Sample Count}
+    \frame{\includegraphics[page=2]{res.pdf}}
+    \caption{Running Time per Iteration Comparison for Amazon data for $D=0.08M$}
     \label{comp:N}
 \end{figure}
 
 In Figure \ref{comp:D} we varied the dimension of each sample of the input data matrix. However, we kept the sample count i.e. row count ($21$ millions in number). The figure shows that the running times for our implementation is little bit higher than that of \textit{sPCA}. However \textit{sPCA} failed to run for data with dimension larger than $140K$ and our algorithm was successful to perform PPCA on data with those higher dimension showed in the graph. The graph shows dimension up to $2M$ while for this dataset we run our algorithm for data with dimension up to $9.8M$. 
 
+ 
 \begin{figure}[!htbp]
     \centering
-    %\frame{\includegraphics{}}
-    \caption{Running Time per Iteration Comparison with \textit{sPCA} for $0.08M$ Dimensional Data}
+    \frame{\includegraphics[page=1]{res.pdf}}
+    \caption{Running Time per Iteration Comparison for Amazon Data for $N=21M$}
     \label{comp:D}
 \end{figure}
 
+
+\newpage
+Same two comparison on Twitter daata set are shown in Figure \ref{comp:N1} and \ref{comp:D1}
+\begin{figure}[!htbp]
+    \centering
+    \frame{\includegraphics[page=4]{res.pdf}}
+    \caption{Running Time per Iteration Comparison for Twitter data \textit{sPCA} with  $D = 0.05M$}
+    \label{comp:N1}
+\end{figure}
+
+\begin{figure}[!htbp]
+    \centering
+    \frame{\includegraphics[page=3]{res.pdf}}
+    \caption{Running Time per Iteration Comparison for Twitter Data for $N = 65M$}
+    \label{comp:D1}
+\end{figure}
+
+\newpage
+\subsubsection{Memory Usage}
+Figure \ref{comp:mem} shows the memory utilization during the generation of a single segment of $W$ on Amazon Data Set. The graph is shown for $N=21M$. The algorithm was run on $8GB$ memory. In the graph any segment count on the left of the left most point on each curve willl result in failure of execution. It also shows that memory utilization becomes saturate at minimum of around $2GB$ as the segment count converges to $17$ in this setup. 
+\begin{figure}[!htbp]
+    \centering
+    \frame{\includegraphics[page=5]{res.pdf}}
+    \caption{Intermediate Data Size for Amazon Data for $N=21M$ and memory = $8GB$}
+    \label{comp:mem}
+\end{figure}
 
 \input{conclusion.tex}
 

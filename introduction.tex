@@ -18,67 +18,70 @@ volume and most
 importantly we have to rethink and redesign existing algorithms which are most
 suitable for
 smaller sized dataset and do not take advantage of clusters.
+In this thesis, we consider one kind of the machine learning algorithms, namely Probabilistic Principal Component Analysis(PPCA) and try to make it practically usable in analysing tall and wide big data which are distributed throughout the whole world. In this chapter we provide the motivation behind our research in Section \ref{sec:1}, we discuss the advantages of using PPCA in Big Data Analysis in Section \ref{sec:2}, in Section \ref{sec:3} we present our contribution in data analysis field and in Section \ref{sec:4} we briefly describe the organization of this book. 
 
+\section{Motivation}
+	\label{sec:1}
+Let us assume some scenario. Let us assume that We have good availability of  machine learning models to do various kinds of data analytics. Moreoevr, our data is of the size $10000 \times 200$. That means it contains $10000$ sample which each sample has $200$ features. The machine learning models will be capable to fit such data pretty easily. As soon as the data usage and data generation rate increases the data size gets larger to $200000 \times 2000$. This time the machine learning models fails to fit such higher dimensional data. Fortunately, we have Principal Component Analysis (PCA) technique to reduce the dimensionality of the data. Thus we can get $100$ principal components from the data. Now the data is compressed enough to fit in our Machine learning models. But if the dimension of data become more higher like in millions or billions then such Tall and Wide data will neither be suitable to fit in machine learning models nor the tradition PCA algorithms can handle such large dimensional data. More question arise if the data get to be geographically distributed. We were intended to give such a method that can answer all these questions and hence solve the problems of geographically distributed higher dimensional Tall and Wide Data.
 
-\section{Data Analysis Approaches }
-Under these circumstances, we can see that in case of extracting some information from the existing data, we may have to cover a good number of data centres located at different geographical area. This has given the introduction of a new data analysis approach, ``Distributed Data Analysis''. Therefore we get the idea of two approaches of data analysis.
+\section{Probabilistic PCA (PPCA) on Big Data}
+	\label{sec:2}
+As PPCA incorporates both probabilistic model of data and EM algorithm for deriving the parameters, it has some advantages from from both sides. Here we elaborate the major ones:
+\begin{itemize}
+	\item Firstly and most importantly, EM algorithm for deriving the parameter is computationally efficient, if only few principal components are required. If we want only $k$
+	components, where $k << D$ and size of data is $N \times D$, time complexity of PPCA is $O(NDk)$. It does not require to calculate a big dense data covariance matrix as intermediate data, so communication complexity is also less. Calculating data covariance matrix
+	is costly in terms of both computational and communication complexity. For this reason.
+	deterministic PCA methods (like EVD, SVD) do not scale well with data (time complexity: $O(ND^2))$. More detailed analysis can be found in the technical report \cite{bishop}. Thus
+	EM steps in PPCA give a well scalable algorithm and is a great advantage for big data
+	analysis.
+	\item For large dataset, it is very common that some entries of data can be missing. As big data
+	can have missing values, deterministic PCA algorithm will give erroneous result and will
+	not be suitable. But for PPCA it is not a problem. Since iterative method of PPCA uses
+	expectation maximization, projected data or expected values of latent variable can still
+	be derived even if some values are missing in random. This benefit of handling missing
+	values is one of the major advantages of PPCA.
+	\item Deterministic PCA methods are not aware of the isotropic noise that is considered by
+	PPCA. It is because these methods consider the squared distance of the new data points
+	from their projections into the principal subspace. So, even for data points that are ran-
+	domly far from the training data, conventional PCA will give a low reconstruction cost
+	if these points are close to the principal subspace. We do not face similar problems in
+	PPCA as it takes ‘noise’ as a parameter and assigns likelihood accordingly.
+	
+	\item For a well defined problem, target dimension k can be known beforehand. But in many
+	
+	data reduction problems the optimal It may not be known in advance. Thus we need such
+	
+	a method that can find dimensionality of the principal subspace automatically from the
+	
+	data. This can be done by a Bayesian treatment of PCA and PPCA forms the basis for it.
+	
+	This is a great advantage for unsupervised learning.
+	
+	\item As we are deriving parameters of a probabilistic model of data, we can easily generate
+	`synthesized' or `fantasy data from the distribution.
+	
+	\item We can combine multiple PPCA models as a probabilistic mixture for complex models to get better accuracy. Using EM algorithm we can easily train mixtures of PPCA models.
+	
+	\item Number of independent parameters in PPCA model grows only linearly with dimension of data D for a fixed target dimension k. Because of this reason, number of independent parameters for multivariate Gaussian distribution can be restricted while still allowing if to capture the dominant correlation in data.
+	
+	\item Lastly, PPCA can be applied to classification problems because we can use it to model class-conditional densities.
+	\end{itemize}
 
-\subsection{Centralized Approach}
-The centralized approach to data analysis from distributed data centers is to centralize them first. As shown in Figure \ref{centralized}, this involves a two different steps: 
+\newpage
+\section{Contribution}
+	\label{sec:3}
+Summarizing, our main contributions are:
+\begin{itemize}
+\item We propose an approach of PPCA that deals with geographically distributed Tall and Wide Big Data and provide an in-depth study of the relative merits against recent efficient approach \textit{sPCA} \cite{elgamal}.
+\item We propose a system that builds upon Apache Spark  \cite{spark} environment and extends their functionality to support multiple data clusters learning applications.
+\item We propose an apparently time efficient method to accumulate partially generated results in various data clusters.
+\item Our proposed approach  will minimize the number of transfers among data centers thus minimize the inter data center bandwidth utilization.
+\item Our method will be scalable to the available hardware of the data clusters. It will allow us to handle Tall and Wide big data in commodity computers even with memory of $6/8GB$.
+\item We will present our experimental results implemented on the clusters in our undergraduate thesis laboratory that will justify the validity of our method.
+\end{itemize}
 
-
-\begin{enumerate}
-
-\item \textbf{Centralizing step} Data from various data centers are copied into a single data center. It involves recreation of data of all data centers in one location.
-
-\item \textbf{Analysis Step} Process of extracting the necessary information from the centralized data takes place in that single data center. Here traditional intra data center technology is sufficient for the analysis purpose.
-
-\end{enumerate}
-
-\begin{figure}[!htbp]
-  \centering
-	\includegraphics[width=3.2in]{figures/1.png}
-	\caption{Centralized Approach}
-	\label{centralized}
-\end{figure}
-
-
-This centralized approach is predominant in most practical settings. 
-There are mainly two reasons behind its popularity. 
-\begin{enumerate}
-\item There are lots of frameworks that have already been established for centralized learning approach. That is why centralizing the data is the easiest way to reuse existing data analysis frameworks \cite{1,2,3}
-\item Learning algorithms are highly communication intensive. Thus it is assumed that they will note be properly responsive to cross data center execution.
-\end{enumerate}
-For these reasons, this centralized approach is consistent with reports on the infrastructures of other large organizations, such as Facebook \cite{4}, Twitter \cite{5}, and LinkedIn \cite{6}. 
-
-However the centralized approach has two shortcomings.
-\begin{enumerate}
-\item While making multiple copy of data at the central data center, it consumes a good amounts of inter data center bandwidth. Since inter data center bandwidth is expensive, it is not easy to increase it according to the necessity \cite{7,8,9,10}.
-\item While creating copy of data, it may be a case that data is crossing national borders. However, in current workd data sovereignty is a growing concern that might create a big limitation in this aspect \cite{11,12}.
-
-\end{enumerate}
-
-\subsection{Distributed Approach}
-In the distributed approach, raw data is kept in their corresponding data centers. Every data center does a portion of the execution that is only on the data of that data center. The final analysis takes pales by passing small amount of information among the data centers. 
-
-\begin{figure}[!htbp]
-  \centering
-	\includegraphics[width=3.2in]{figures/2.png}
-	\caption{Distributed Approach}
-\label{distributed}
-\end{figure}
-
-So according to Figure \ref{distributed}, we can see this approach includes three steps:
-
-\begin{enumerate}
-\item \textbf{Local Computation} Whenever the command of starting of any learning process is issued every data center start a partial computation on its own data. They create necessary high level information on data that will be needed in the final computation.
-
-\item \textbf{Parameter Passing} Data centers communicate among themselves and share valuable information.
-
-\item \textbf{Final Computation} By integrating the partial results data centers make the final computational model.
-\end{enumerate}
-
-In this way distributed solutions can achieve much lower cross data centers bandwidth utilization, and thus substantially lower cost for large-scale analysis tasks. As the current world has got a concern about `Big Data' and `Data Sovereignty', the distributed approach seems to be more efficient. 
-
+\section{Organization of this Book}
+	\label{sec:4}
+	The rest of the book is organized as follows. In Chapter \ref{c:2}, we define some basic terminologies. In Chapter \ref{c:3}, we describe all the mathematical background characteristics of PCA. In Chapter \ref{c:4}, we write about our focus. In Chapter \ref{c:5}, we describe our preliminary works on regression analysis. In Chapter \ref{c:6}, we describe our main approach to solve the existing problem. Chapter \ref{c:7} describes the properties of our approach while Chapter \ref{c:8} gives a brief on our  Spark implementation. With showing the experimenta;l results in Chapter \ref{c:9}, the book concludes with Chapter \ref{c:10}. 
 
 \endinput

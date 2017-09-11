@@ -16,7 +16,7 @@ Wikipedia link: \texttt{\url{https://en.wikipedia.org/wiki/Data_analysis}}
 \texttt{\url{https://en.wikipedia.org/wiki/Normal_distribution}}
 
 \bibitem{mparallel}
-\texttt{\url{https://www.quora.com/What-is-the-difference-between-model\\-parallelism-and-data-parallelism}}
+\texttt{\url{https://www.quora.com/What-is-the-difference-between-model/ -parallelism-and-data-parallelism}}
 
 \bibitem{tensor}
 \texttt{\url{https://www.tensorflow.org/}}
@@ -69,7 +69,7 @@ arXiv:1404.1100}. 2014.
 T. Elgamal and M. Hefeeda. Analysis of pca algorithms in distributed environments. \textit{arXiv preprint arXiv:1503.05214}. 2015.
 
 \bibitem{16}
-N. P. Halko. Randomized methods for computing low-rank approx- imations of matrices. Ph.D. dissertation, Boulder, CO, USA, 2012, aAI3507998.
+N. P. Halko. Randomized methods for computing low-rank approximations of matrices. Ph.D. dissertation, Boulder, CO, USA, 2012, aAI3507998.
 
 \bibitem{17}
 M. E. Tipping and C. M. Bishop. Probabilistic principal component analysis. \textit{Journal of the Royal Statistical Society: Series B (Statistical Methodology), vol. 61, no. 3, pp. 611?622}. 1999.

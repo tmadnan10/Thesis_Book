@@ -3,5 +3,4 @@
 % separated by a comma (,)
 Md. Rashedul Islam, 201205013
 T.M. Tariq Adnan, 201205073
-Third Thesis Student Name, 201414200
 
